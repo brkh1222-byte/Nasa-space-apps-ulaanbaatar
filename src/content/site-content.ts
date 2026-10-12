@@ -16,7 +16,7 @@ export const ui = {
   learnMore: { en: "Learn about the hackathon", mn: "Хакатоны тухай" },
   challenges: { en: "Challenges", mn: "Сорилтууд" },
   faq: { en: "FAQ", mn: "Асуулт, хариулт" },
-  seeAllChallenges: { en: "See all 14 challenges", mn: "14 сорилтыг бүгдийг харах" },
+  seeAllChallenges: { en: "See all 14 challenges", mn: "14 сорилтыг бүгдийг нь үзэх" },
   allQuestions: { en: "All questions", mn: "Бүх асуулт" },
   opensInNewTab: { en: "(opens in a new tab)", mn: "(шинэ цонхонд нээгдэнэ)" },
   comingSoon: { en: "To be announced", mn: "Удахгүй зарлана" },
@@ -28,7 +28,7 @@ export const navItems = [
   { to: "/about", label: { en: "About", mn: "Тухай" } },
   { to: "/challenges", label: { en: "Challenges", mn: "Сорилтууд" } },
   { to: "/schedule", label: { en: "Schedule", mn: "Хөтөлбөр" } },
-  { to: "/judging", label: { en: "Judging", mn: "Шүүлт" } },
+  { to: "/judging", label: { en: "Judging", mn: "Шалгаруулалт" } },
   { to: "/faq", label: { en: "FAQ", mn: "Асуулт" } },
   { to: "/organizers", label: { en: "Organizers", mn: "Зохион байгуулагч" } },
 ] as const;
@@ -42,11 +42,11 @@ export const hero = {
   titleBottom: { en: "14–15 November 2026", mn: "2026.11.14–15" },
   summary: {
     en: "Two days to build solutions for challenges on Earth and in space with NASA open data. Free, in person or virtual, and open to every skill level.",
-    mn: "NASA-гийн нээлттэй өгөгдлөөр Дэлхий болон сансарт тулгарч буй сорилтуудад шийдэл бүтээх хоёр өдөр. Үнэ төлбөргүй, танхимаар болон цахимаар, бүх түвшний оролцогчдод нээлттэй.",
+    mn: "NASA-гийн нээлттэй өгөгдлийг ашиглан Дэлхий болон сансарт тулгамдаж буй асуудлуудад шийдэл бүтээх хоёр өдөр. Танхимаар болон цахимаар үнэ төлбөргүй оролцох боломжтой бөгөөд бүх түвшний оролцогчдод нээлттэй.",
   },
   imageAlt: {
     en: "Earth and Central Asia seen from low orbit",
-    mn: "Дэлхий болон Төв Ази сансраас харагдах нь",
+    mn: "Сансраас харагдах Дэлхий болон Төв Ази",
   },
 } satisfies Record<string, Localized>;
 
@@ -77,19 +77,19 @@ export const about = {
   eyebrow: { en: "About the hackathon", mn: "Хакатоны тухай" },
   title: {
     en: "Global questions. Local imagination.",
-    mn: "Дэлхийн асуулт. Монголын бүтээлч сэтгэлгээ.",
+    mn: "Дэлхийн сорилт. Монголын бүтээлч сэтгэлгээ.",
   },
   pageIntro: {
     en: "What NASA Space Apps is, how the Ulaanbaatar event works, and how to take part.",
-    mn: "NASA Space Apps гэж юу вэ, Улаанбаатарын арга хэмжээ хэрхэн явагдах, яаж оролцох тухай.",
+    mn: "NASA Space Apps гэж юу вэ, Улаанбаатарын арга хэмжээ хэрхэн явагдах, хэрхэн оролцох талаарх мэдээлэл.",
   },
   lead: {
     en: "NASA Space Apps is the world’s largest annual global hackathon. In Ulaanbaatar, students, scientists, designers, engineers, storytellers and curious minds come together to turn open data into ideas with real-world impact.",
-    mn: "NASA Space Apps бол дэлхийн хамгийн том жил бүрийн хакатон. Улаанбаатарт оюутан, эрдэмтэн, дизайнер, инженер, өгүүлэгч, шинийг эрэлхийлэгчид нээлттэй өгөгдлийг бодит нөлөө бүхий санаа болгон хувиргана.",
+    mn: "NASA Space Apps бол жил бүр зохион байгуулагддаг дэлхийн хамгийн том хакатон юм. Улаанбаатарт оюутан, эрдэмтэн, дизайнер, инженер, контент бүтээгч болон шинэ зүйлд тэмүүлэгч хүн бүр нэгдэж, нээлттэй өгөгдлийг бодит үр нөлөөтэй шийдэл болгон хөгжүүлнэ.",
   },
   body: {
     en: "You do not need to be a space expert. Bring a perspective, find a team, choose a NASA challenge, and prototype a response over one focused weekend. Local winners are nominated for NASA Global Judging.",
-    mn: "Сансрын мэргэжилтэн байх шаардлагагүй. Өөрийн өнцгийг авч ирээд, багаа бүрдүүлж, NASA-гийн сорилтыг сонгон нэг амралтын өдрөөр шийдлийн загвар бүтээнэ. Орон нутгийн ялагчид NASA-гийн дэлхийн шатны шүүлтэд нэр дэвшинэ.",
+    mn: "Сансрын мэргэжилтэн байх шаардлагагүй. Өөрийн өвөрмөц санаа, үзэл бодлоо хуваалцаж, багаа бүрдүүлэн, NASA-гийн сорилтоос сонгоод, нэг амралтын өдрийн дотор шийдлийнхээ загварыг бүтээгээрэй. Улаанбаатарын шилдэг багууд NASA-гийн дэлхийн шатны шалгаруулалтад нэр дэвшинэ.",
   },
   modesTitle: { en: "Choose how you join", mn: "Хэрхэн оролцохоо сонгоно уу" },
   modes: [
@@ -97,14 +97,14 @@ export const about = {
       title: { en: "In person", mn: "Танхимаар" },
       text: {
         en: "Build alongside the local community in Ulaanbaatar, with mentors, workshops and the full event atmosphere. Venue to be announced.",
-        mn: "Улаанбаатар дахь хамт олонтойгоо ментор, сургалт, арга хэмжээний бүрэн орчинд бүтээнэ. Байршлыг удахгүй зарлана.",
+        mn: "Улаанбаатар дахь хамт олонтойгоо нэгдэж, менторуудын зөвлөгөө, сургалтад хамрагдан, арга хэмжээний уур амьсгал дунд хамтдаа бүтээнэ. Байршлыг удахгүй зарлана.",
       },
     },
     {
       title: { en: "Virtual", mn: "Цахимаар" },
       text: {
         en: "Join the Ulaanbaatar event remotely, collaborate online, and take part in scheduled check-ins and submissions from wherever you are.",
-        mn: "Улаанбаатарын арга хэмжээнд алсаас нэгдэж, цахимаар хамтран ажиллаж, товлосон уулзалт болон бүтээл илгээх үйл явцад оролцоно.",
+        mn: "Хаанаас ч Улаанбаатарын арга хэмжээнд цахимаар нэгдэж, багтайгаа онлайнаар хамтран ажиллаж, товлосон уулзалт болон бүтээл илгээх үйл явцад оролцоно.",
       },
     },
   ],
@@ -114,7 +114,7 @@ export const howItWorks = {
   eyebrow: { en: "How it works", mn: "Хэрхэн явагдах вэ" },
   title: {
     en: "From open data to a working idea in one weekend",
-    mn: "Нээлттэй өгөгдлөөс бодит санаа хүртэл нэг амралтын өдөрт",
+    mn: "Нээлттэй өгөгдлөөс бодит шийдэл хүртэл ердөө хоёр өдөрт",
   },
   steps: [
     {
@@ -128,21 +128,21 @@ export const howItWorks = {
       title: { en: "Join a team", mn: "Багт нэгдэх" },
       text: {
         en: "Come with a team, form one on the official site, or meet teammates at the event.",
-        mn: "Багтайгаа ирэх, албан ёсны сайт дээр баг үүсгэх эсвэл арга хэмжээн дээр хамтрагчаа олно.",
+        mn: "Багтайгаа ирэх, албан ёсны сайт дээр баг үүсгэх эсвэл арга хэмжээний үеэр шинэ хамтрагчидтай танилцаж болно.",
       },
     },
     {
       title: { en: "Build", mn: "Бүтээх" },
       text: {
         en: "Pick one of the 14 NASA challenges and build over two days with help from local mentors.",
-        mn: "NASA-гийн 14 сорилтоос нэгийг сонгож, менторуудын дэмжлэгтэйгээр хоёр өдөр бүтээнэ.",
+        mn: "NASA-гийн 14 сорилтоос нэгийг сонгож, менторуудын дэмжлэгтэйгээр хоёр өдрийн турш бүтээнэ.",
       },
     },
     {
       title: { en: "Present", mn: "Танилцуулах" },
       text: {
         en: "Submit your project and pitch it to local judges. Local nominees go on to NASA Global Judging.",
-        mn: "Бүтээлээ илгээж, орон нутгийн шүүгчдэд танилцуулна. Нэр дэвшсэн багууд NASA-гийн дэлхийн шатны шүүлтэд оролцоно.",
+        mn: "Бүтээлээ илгээж, орон нутгийн шүүгчдэд танилцуулна. Шилдэг багууд NASA-гийн дэлхийн шатны шалгаруулалтад нэр дэвшинэ.",
       },
     },
   ],
@@ -150,27 +150,30 @@ export const howItWorks = {
 
 export const participantGuide = {
   eyebrow: { en: "Participant guide", mn: "Оролцогчийн хөтөч" },
-  title: { en: "Come curious. Leave with a project.", mn: "Сониуч ир. Бүтээлтэй буц." },
+  title: {
+    en: "Come curious. Leave with a project.",
+    mn: "Сониуч сэтгэлээр ирж, бүтээлтэй буцаарай.",
+  },
   items: [
     {
       title: { en: "Who can join", mn: "Хэн оролцох вэ" },
       text: {
         en: "Students, professionals, makers, researchers, artists and first-time hackers are all welcome. Age and participation rules follow the official NASA Space Apps terms.",
-        mn: "Оюутан, мэргэжилтэн, бүтээгч, судлаач, уран бүтээлч болон анх удаа оролцогч бүгдэд нээлттэй. Нас болон оролцооны дүрэм NASA Space Apps-ийн албан ёсны нөхцлийг баримтална.",
+        mn: "Оюутан, мэргэжилтэн, бүтээгч, судлаач, уран бүтээлч болон анх удаа оролцож буй хүн бүрт нээлттэй. Нас болон оролцооны дүрэм NASA Space Apps-ийн албан ёсны нөхцөлийг баримтална.",
       },
     },
     {
       title: { en: "What to bring", mn: "Юу авчрах вэ" },
       text: {
         en: "A laptop and charger, identification, a reusable water bottle, and anything your craft needs. Most importantly, an open mind.",
-        mn: "Зөөврийн компьютер, цэнэглэгч, үнэмлэх, усны сав болон бүтээлдээ хэрэгтэй зүйлсээ авчирна. Хамгийн чухал нь нээлттэй сэтгэлгээ.",
+        mn: "Зөөврийн компьютер, цэнэглэгч, иргэний үнэмлэх, усны сав болон бүтээлдээ хэрэгтэй бусад зүйлсээ авчраарай. Хамгийн гол нь нээлттэй сэтгэлгээ.",
       },
     },
     {
       title: { en: "Teams and skills", mn: "Баг ба ур чадвар" },
       text: {
         en: "Mixed teams do best. Coding helps, but research, design, communication, science and local knowledge matter just as much.",
-        mn: "Олон талын ур чадвартай баг илүү амжилттай байдаг. Код бичих нь тустай ч судалгаа, дизайн, харилцаа, шинжлэх ухаан, орон нутгийн мэдлэг адил чухал.",
+        mn: "Олон талын ур чадвартай багууд илүү амжилтад хүрдэг. Код бичих чадвар тустай ч судалгаа, дизайн, харилцаа, шинжлэх ухаан, орон нутгийн мэдлэг ч мөн адил чухал.",
       },
     },
   ],
@@ -236,7 +239,7 @@ export const challenges = {
   findTeam: { en: "Find a team", mn: "Баг хайх" },
   teaserTitle: {
     en: "14 questions from NASA. Pick yours.",
-    mn: "NASA-гийн 14 асуулт. Өөрийнхөө сорилтыг сонго.",
+    mn: "NASA-гийн 14 сорилт. Өөрт тохирохыг нь сонгоорой.",
   },
   goalLabel: { en: "The challenge", mn: "Сорилт" },
   backgroundLabel: { en: "Background", mn: "Суурь мэдээлэл" },
@@ -244,7 +247,7 @@ export const challenges = {
   hideBackground: { en: "Hide background", mn: "Хураах" },
   source: {
     en: "Summaries from the official NASA Space Apps Challenge website.",
-    mn: "Товч мэдээллийг NASA Space Apps Challenge-ийн албан ёсны сайтаас авав.",
+    mn: "Сорилтуудын товч мэдээллийг NASA Space Apps Challenge-ийн албан ёсны сайтаас авсан болно.",
   },
   items: [
     {
@@ -285,7 +288,7 @@ export const challenges = {
       code: "03",
       title: {
         en: "Build a Junior Astronaut Mission Trainer",
-        mn: "Бага сансрын нисгэгчийн даалгаврын сургагч бүтээ",
+        mn: "Бяцхан сансрын нисгэгчдэд зориулсан сургалтын тоглоом бүтээ",
       },
       difficulty: ["intermediate", "beginner"],
       subjects: ["games", "planets", "software", "space", "sun"],
@@ -347,7 +350,7 @@ export const challenges = {
       code: "07",
       title: {
         en: "Field Shift: Adapting Farms with NASA Data",
-        mn: "Талбайн шилжилт: NASA-гийн өгөгдлөөр фермийг дасан зохицуулах нь",
+        mn: "Field Shift: NASA-гийн өгөгдлөөр тариаланг шинэ нөхцөлд дасан зохицуулах нь",
       },
       difficulty: ["advanced", "intermediate"],
       subjects: ["arts", "earth", "software"],
@@ -415,7 +418,7 @@ export const challenges = {
       code: "11",
       title: {
         en: "Interplanetary Survival Guide: Martian Map",
-        mn: "Гариг хоорондын амьд үлдэх гарын авлага: Ангарагийн газрын зураг",
+        mn: "Гараг хоорондын амьд үлдэх гарын авлага: Ангарагийн газрын зураг",
       },
       difficulty: ["intermediate"],
       subjects: ["human", "mars", "planets", "software", "space"],
@@ -478,7 +481,7 @@ export const schedule = {
   eyebrow: { en: "Two-day schedule", mn: "Хоёр өдрийн хөтөлбөр" },
   title: {
     en: "A focused weekend to make something matter",
-    mn: "Үнэ цэнтэй зүйл бүтээх төвлөрсөн амралтын өдрүүд",
+    mn: "Үнэ цэнтэй зүйл бүтээх хоёр өдөр",
   },
   pageIntro: {
     en: "The provisional programme for Saturday and Sunday. Final times will be confirmed with the venue.",
@@ -491,7 +494,10 @@ export const schedule = {
       label: { en: "Day 1", mn: "1-р өдөр" },
       date: { en: "Saturday · 14 November", mn: "Бямба · 11-р сарын 14" },
       items: [
-        { time: "08:30", title: { en: "Doors open and check-in", mn: "Бүртгэл эхэлнэ" } },
+        {
+          time: "08:30",
+          title: { en: "Doors open and check-in", mn: "Хаалга нээгдэж, бүртгэл эхэлнэ" },
+        },
         { time: "09:30", title: { en: "Opening briefing", mn: "Нээлтийн танилцуулга" } },
         {
           time: "10:30",
@@ -500,7 +506,11 @@ export const schedule = {
             mn: "Баг бүрдүүлэлт ба сорилт сонголт",
           },
         },
-        { time: "12:00", title: { en: "Build session begins", mn: "Бүтээх үе эхэлнэ" }, key: true },
+        {
+          time: "12:00",
+          title: { en: "Build session begins", mn: "Бүтээлийн ажил эхэлнэ" },
+          key: true,
+        },
         { time: "18:00", title: { en: "Mentor checkpoint", mn: "Менторын зөвлөгөө" } },
       ],
     },
@@ -508,11 +518,11 @@ export const schedule = {
       label: { en: "Day 2", mn: "2-р өдөр" },
       date: { en: "Sunday · 15 November", mn: "Ням · 11-р сарын 15" },
       items: [
-        { time: "09:00", title: { en: "Build session resumes", mn: "Бүтээх үе үргэлжилнэ" } },
+        { time: "09:00", title: { en: "Build session resumes", mn: "Бүтээлийн ажил үргэлжилнэ" } },
         { time: "12:00", title: { en: "Submission clinic", mn: "Бүтээл илгээх зөвлөгөө" } },
         {
           time: "15:00",
-          title: { en: "Project submissions close", mn: "Бүтээл хүлээн авч дуусна" },
+          title: { en: "Project submissions close", mn: "Бүтээл хүлээн авах хугацаа дуусна" },
           key: true,
         },
         { time: "16:00", title: { en: "Team presentations", mn: "Багуудын танилцуулга" } },
@@ -528,20 +538,20 @@ export const schedule = {
 
 // TODO(content): confirm local prizes, award categories and the criteria weights.
 export const judging = {
-  eyebrow: { en: "Judging & awards", mn: "Шүүлт ба шагнал" },
+  eyebrow: { en: "Judging & awards", mn: "Шалгаруулалт ба шагнал" },
   title: {
     en: "Good ideas are clear, useful and built to travel",
-    mn: "Сайн санаа ойлгомжтой, хэрэгтэй, өргөжин хөгжих чадвартай",
+    mn: "Сайн санаа ойлгомжтой, хэрэгцээтэй, цаашид хөгжих боломжтой байдаг",
   },
   pageIntro: {
     en: "How projects are judged in Ulaanbaatar and how local nominees reach NASA Global Judging.",
-    mn: "Улаанбаатарт төслүүдийг хэрхэн үнэлж, нэр дэвшигчид NASA-гийн дэлхийн шатны шүүлтэд хэрхэн шалгардаг тухай.",
+    mn: "Улаанбаатарт төслүүдийг хэрхэн үнэлдэг, шилдэг багууд NASA-гийн дэлхийн шатны шалгаруулалтад хэрхэн шалгардаг тухай.",
   },
   intro: {
     en: "Local judges assess each eligible project using the NASA Space Apps criteria. Local nominees advance to NASA Global Judging and are considered for Global Awards.",
-    mn: "Орон нутгийн шүүгчид шаардлага хангасан бүтээл бүрийг NASA Space Apps-ийн шалгуураар үнэлнэ. Нэр дэвшсэн багууд NASA-гийн дэлхийн шатны шүүлтэд оролцож, Global Awards-д өрсөлдөнө.",
+    mn: "Орон нутгийн шүүгчид шаардлага хангасан бүтээл бүрийг NASA Space Apps-ийн шалгуураар үнэлнэ. Нэр дэвшсэн багууд NASA-гийн дэлхийн шатны шалгаруулалтад оролцож, Global Awards-ын төлөө өрсөлдөнө.",
   },
-  criteriaTitle: { en: "Judging criteria", mn: "Шүүлтийн шалгуур" },
+  criteriaTitle: { en: "Judging criteria", mn: "Үнэлгээний шалгуур" },
   criteria: [
     {
       value: "25%",
@@ -572,7 +582,7 @@ export const judging = {
       label: { en: "Relevance", mn: "Нийцэл" },
       text: {
         en: "How directly it answers the chosen NASA challenge.",
-        mn: "Сонгосон NASA-гийн сорилтод хэр шууд хариулж байна вэ.",
+        mn: "Сонгосон NASA-гийн сорилтод хэр оновчтой хариулж байна вэ.",
       },
     },
   ],
@@ -592,7 +602,7 @@ export const judging = {
     },
     {
       en: "Nominees enter NASA Global Judging for the Global Awards",
-      mn: "Нэр дэвшигчид NASA-гийн дэлхийн шатны шүүлтэд оролцоно",
+      mn: "Нэр дэвшигчид NASA-гийн дэлхийн шатны шалгаруулалтад оролцоно",
     },
   ],
   prizes: {
@@ -602,7 +612,7 @@ export const judging = {
   peopleTitle: { en: "Mentors & judges", mn: "Ментор ба шүүгчид" },
   peopleText: {
     en: "We are inviting leaders across science, technology, design, data, business and storytelling. Confirmed names will appear here.",
-    mn: "Шинжлэх ухаан, технологи, дизайн, өгөгдөл, бизнес, өгүүлэмжийн салбарын манлайлагчдыг урьж байна. Баталгаажсан нэрсийг энд нийтэлнэ.",
+    mn: "Шинжлэх ухаан, технологи, дизайн, өгөгдөл, бизнес, контент бүтээлийн салбарын манлайлагчдыг урьж байна. Баталгаажсан нэрсийг энд нийтэлнэ.",
   },
   // TODO(content): add confirmed people as { name, role, organization }.
   mentors: [] as Array<{ name: string; role: Localized; organization: string }>,
@@ -616,14 +626,14 @@ export const faqs = {
   title: { en: "Before you join", mn: "Оролцохын өмнө" },
   pageIntro: {
     en: "Answers to common questions. Can't find yours? Get in touch with the Ulaanbaatar team.",
-    mn: "Түгээмэл асуултын хариулт. Хариултаа олсонгүй юу? Улаанбаатарын багтай холбогдоорой.",
+    mn: "Түгээмэл асуултуудын хариулт. Хариултаа олж чадсангүй юу? Улаанбаатарын зохион байгуулах багтай холбогдоорой.",
   },
   topics: {
     registration: { en: "Registration", mn: "Бүртгэл" },
     teams: { en: "Teams", mn: "Баг" },
     participation: { en: "Taking part", mn: "Оролцоо" },
     event: { en: "On the day", mn: "Арга хэмжээний өдөр" },
-    judging: { en: "Judging", mn: "Шүүлт" },
+    judging: { en: "Judging", mn: "Шалгаруулалт" },
   } satisfies Record<FaqTopic, Localized>,
   items: [
     {
@@ -643,7 +653,7 @@ export const faqs = {
       },
       answer: {
         en: "Use any Register button on this site. It opens the Ulaanbaatar page on the official NASA Space Apps site, where you create an account and join the local event.",
-        mn: "Энэ сайтын «Бүртгүүлэх» товчийг дарна уу. NASA Space Apps-ийн албан ёсны сайтын Улаанбаатарын хуудас нээгдэх бөгөөд тэнд бүртгэл үүсгэж, арга хэмжээнд нэгдэнэ.",
+        mn: "Энэ сайт дээрх «Бүртгүүлэх» товчийг дарахад NASA Space Apps-ийн албан ёсны сайтын Улаанбаатарын хуудас нээгдэнэ. Тэнд бүртгэл үүсгээд Улаанбаатарын арга хэмжээнд нэгдээрэй.",
       },
     },
     {
@@ -651,7 +661,7 @@ export const faqs = {
       question: { en: "Is there an age requirement?", mn: "Насны шаардлага бий юу?" },
       answer: {
         en: "Age rules follow the official NASA Space Apps participant terms. Check the official Participant FAQs, linked at the bottom of this page.",
-        mn: "Насны дүрэм NASA Space Apps-ийн албан ёсны оролцогчийн нөхцлийг баримтална. Энэ хуудасны доод хэсэгт байгаа албан ёсны Participant FAQs-ийг үзнэ үү.",
+        mn: "Насны дүрэм NASA Space Apps-ийн албан ёсны оролцогчийн нөхцөлийг баримтална. Дэлгэрэнгүйг хуудасны доод хэсэгт байрлах албан ёсны Participant FAQs-аас үзнэ үү.",
       },
     },
     {
@@ -663,7 +673,7 @@ export const faqs = {
       },
       answer: {
         en: "No. Register on your own, then form or join a team on the official site or meet teammates at the opening team-formation session.",
-        mn: "Үгүй. Ганцаараа бүртгүүлээд албан ёсны сайт дээр баг үүсгэх, нэгдэх эсвэл нээлтийн баг бүрдүүлэх үеэр хамтрагчаа олж болно.",
+        mn: "Үгүй. Ганцаараа бүртгүүлээд албан ёсны сайт дээр баг үүсгэх, багт нэгдэх эсвэл нээлтийн үеэр болох баг бүрдүүлэлтээр хамтрагчаа олж болно.",
       },
     },
     {
@@ -674,7 +684,7 @@ export const faqs = {
       },
       answer: {
         en: "Team rules are set by NASA Space Apps. The official Find a Team page shows the options for 2026.",
-        mn: "Багийн дүрмийг NASA Space Apps тогтоодог. 2026 оны боломжуудыг албан ёсны Find a Team хуудаснаас харна уу.",
+        mn: "Багийн дүрмийг NASA Space Apps тогтоодог. 2026 оны дэлгэрэнгүй мэдээллийг албан ёсны Find a Team хуудаснаас үзнэ үү.",
       },
     },
     {
@@ -683,7 +693,7 @@ export const faqs = {
       question: { en: "Do I need to know how to code?", mn: "Код бичдэг байх шаардлагатай юу?" },
       answer: {
         en: "No. Strong teams combine technical and non-technical skills, including science, research, design, storytelling and community knowledge.",
-        mn: "Үгүй. Амжилттай багт техник, шинжлэх ухаан, судалгаа, дизайн, өгүүлэмж, орон нутгийн мэдлэг зэрэг олон ур чадвар нэгддэг.",
+        mn: "Үгүй. Амжилттай багууд техникийн ур чадварыг шинжлэх ухаан, судалгаа, дизайн, контент бүтээл, орон нутгийн мэдлэг зэрэг бусад чадвартай хослуулдаг.",
       },
     },
     {
@@ -710,7 +720,7 @@ export const faqs = {
       question: { en: "What should I bring?", mn: "Юу авчрах вэ?" },
       answer: {
         en: "A laptop and charger, identification and a reusable water bottle. Details for the venue will be shared before the event.",
-        mn: "Зөөврийн компьютер, цэнэглэгч, үнэмлэх, усны сав. Байршлын дэлгэрэнгүйг арга хэмжээний өмнө мэдэгдэнэ.",
+        mn: "Зөөврийн компьютер, цэнэглэгч, иргэний үнэмлэх, усны сав. Байршлын дэлгэрэнгүй мэдээллийг арга хэмжээний өмнө хүргэнэ.",
       },
     },
     {
@@ -718,7 +728,7 @@ export const faqs = {
       question: { en: "Where is the venue?", mn: "Хаана болох вэ?" },
       answer: {
         en: "The Ulaanbaatar venue will be announced here and on Questa's Instagram.",
-        mn: "Улаанбаатар дахь байршлыг энд болон Questa-гийн Instagram хуудсаар зарлана.",
+        mn: "Улаанбаатар дахь байршлыг энэ сайт болон Questa-гийн Instagram хуудсаар зарлана.",
       },
     },
     {
@@ -726,7 +736,7 @@ export const faqs = {
       question: { en: "How are projects judged?", mn: "Төслүүдийг хэрхэн үнэлэх вэ?" },
       answer: {
         en: "Local judges score projects on impact, creativity, validity and relevance. Local nominees go on to NASA Global Judging. See the Judging page for details.",
-        mn: "Орон нутгийн шүүгчид төслийг үр нөлөө, бүтээлч байдал, үндэслэл, нийцлээр нь үнэлнэ. Нэр дэвшигчид NASA-гийн дэлхийн шатны шүүлтэд оролцоно. Дэлгэрэнгүйг «Шүүлт» хуудаснаас үзнэ үү.",
+        mn: "Орон нутгийн шүүгчид төслүүдийг үр нөлөө, бүтээлч байдал, үндэслэл, нийцэл гэсэн шалгуураар үнэлнэ. Шилдэг багууд NASA-гийн дэлхийн шатны шалгаруулалтад нэр дэвшинэ. Дэлгэрэнгүйг «Шалгаруулалт» хуудаснаас үзнэ үү.",
       },
     },
   ] as Array<{ topic: FaqTopic; featured?: boolean; question: Localized; answer: Localized }>,
@@ -736,7 +746,7 @@ export const organizers = {
   eyebrow: { en: "Organizers", mn: "Зохион байгуулагчид" },
   title: {
     en: "Built in Ulaanbaatar. Connected to the world.",
-    mn: "Улаанбаатарт бүтээнэ. Дэлхийтэй холбогдоно.",
+    mn: "Улаанбаатараас эхэлж, дэлхийтэй холбогдоно.",
   },
   pageIntro: {
     en: "NASA Space Apps Challenge Ulaanbaatar is hosted by Questa as an official local event of the global hackathon.",
@@ -746,9 +756,9 @@ export const organizers = {
   hostTitle: { en: "Hosted by Questa", mn: "Зохион байгуулагч: Questa" },
   hostText: {
     en: "Questa hosts NASA Space Apps Challenge Ulaanbaatar, bringing the world’s largest annual hackathon to Mongolia’s students, builders and STEM community.",
-    mn: "Questa нь дэлхийн хамгийн том жил бүрийн хакатоныг Монголын оюутан, бүтээгчид болон STEM хамт олонд хүргэж, NASA Space Apps Challenge Улаанбаатарыг зохион байгуулж байна.",
+    mn: "Questa нь жил бүр зохион байгуулагддаг дэлхийн хамгийн том хакатоныг Монголын оюутан залуус, бүтээгчид болон STEM хамт олонд хүргэж, NASA Space Apps Challenge Улаанбаатарыг зохион байгуулж байна.",
   },
-  followQuesta: { en: "Follow Questa on Instagram", mn: "Questa-г Instagram-д дагах" },
+  followQuesta: { en: "Follow Questa on Instagram", mn: "Questa-г Instagram-аас дагах" },
   teamTitle: { en: "Local team and partners", mn: "Орон нутгийн баг ба түншүүд" },
   teamText: {
     en: "The local organizing team, partners and sponsors will be announced as they are confirmed.",
@@ -756,7 +766,7 @@ export const organizers = {
   },
   partnerCta: {
     en: "Interested in partnering or mentoring? Contact the team.",
-    mn: "Түнш эсвэл ментор болох сонирхолтой юу? Багтай холбогдоорой.",
+    mn: "Түнш эсвэл ментор болох сонирхолтой юу? Бидэнтэй холбогдоорой.",
   },
 } as const;
 
@@ -765,7 +775,7 @@ export const officialLinks = {
     en: "Official NASA Space Apps links",
     mn: "NASA Space Apps-ийн албан ёсны холбоосууд",
   },
-  title: { en: "Everything official, one click away", mn: "Албан ёсны мэдээлэл нэг товшилтод" },
+  title: { en: "Everything official, one click away", mn: "Албан ёсны бүх мэдээлэл нэг дор" },
   items: [
     {
       key: "localEvent",
@@ -784,7 +794,7 @@ export const officialLinks = {
 
 export const register = {
   eyebrow: { en: "14–15 November 2026", mn: "2026 оны 11-р сарын 14–15" },
-  title: { en: "Your perspective belongs in the room.", mn: "Таны өнцөг энд хэрэгтэй." },
+  title: { en: "Your perspective belongs in the room.", mn: "Таны оролцоо, санаа энд хэрэгтэй." },
   text: {
     en: "Registration is open on the official NASA Space Apps site. Sign up for the Ulaanbaatar local event and join or form a team.",
     mn: "Бүртгэл NASA Space Apps-ийн албан ёсны сайт дээр нээлттэй байна. Улаанбаатарын арга хэмжээнд бүртгүүлж, баг үүсгэх эсвэл багт нэгдээрэй.",
@@ -805,7 +815,7 @@ export const footer = {
   officialLabel: { en: "NASA Space Apps", mn: "NASA Space Apps" },
   contactLabel: { en: "Contact", mn: "Холбоо барих" },
   emailSoon: { en: "Official email coming soon", mn: "Албан ёсны имэйл удахгүй" },
-  followSpaceApps: { en: "Follow NASA Space Apps", mn: "NASA Space Apps-г дагах" },
+  followSpaceApps: { en: "Follow NASA Space Apps", mn: "NASA Space Apps-ийг дагах" },
   disclaimer: {
     en: "NASA Space Apps Challenge Ulaanbaatar is a local event of the global NASA International Space Apps Challenge, hosted by Questa. NASA does not endorse any non-U.S. Government entity and is not responsible for information contained on non-U.S. Government websites.",
     mn: "NASA Space Apps Challenge Улаанбаатар нь NASA International Space Apps Challenge дэлхийн арга хэмжээний орон нутгийн салбар бөгөөд Questa зохион байгуулж байна. NASA нь АНУ-ын Засгийн газрын бус байгууллагыг дэмждэггүй бөгөөд тэдгээрийн вэбсайт дээрх мэдээллийг хариуцахгүй.",

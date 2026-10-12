@@ -117,13 +117,13 @@ function SiteHeader() {
         >
           <Lockup tone={tone} compact />
         </Link>
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-5 xl:flex 2xl:gap-7" aria-label="Primary">
           {navItems.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               className={cn(
-                "relative text-sm font-semibold transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all hover:after:w-full",
+                "relative whitespace-nowrap text-sm font-semibold transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all hover:after:w-full",
                 tone === "light"
                   ? "text-white/85 hover:text-white"
                   : "text-muted-foreground hover:text-deep",
@@ -148,7 +148,7 @@ function SiteHeader() {
             aria-controls="mobile-menu"
             aria-label={open ? t(ui.close) : t(ui.menu)}
             className={cn(
-              "grid size-10 place-items-center rounded-lg lg:hidden",
+              "grid size-10 place-items-center rounded-lg xl:hidden",
               tone === "light" ? "text-white hover:bg-white/10" : "text-deep hover:bg-mist",
             )}
           >
@@ -164,7 +164,7 @@ function SiteHeader() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 bottom-0 top-16 flex flex-col overflow-y-auto bg-white lg:hidden"
+            className="fixed inset-x-0 bottom-0 top-16 flex flex-col overflow-y-auto bg-white xl:hidden"
           >
             <Container className="flex flex-1 flex-col gap-8 py-8">
               <nav className="grid gap-1" aria-label="Mobile">

@@ -314,7 +314,7 @@ function ContactCard() {
     <div className="grid gap-5 rounded-2xl bg-deep p-7 text-white md:grid-cols-[1fr_auto] md:items-center">
       <div className="grid gap-2">
         <h2 className="text-2xl font-bold">
-          {t({ en: "Still have a question?", mn: "Асуулт хэвээр байна уу?" })}
+          {t({ en: "Still have a question?", mn: "Өөр асуулт байна уу?" })}
         </h2>
         <p className="text-on-deep">{contact.email ? contact.email : t(footer.emailSoon)}</p>
       </div>
