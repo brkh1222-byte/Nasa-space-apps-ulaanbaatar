@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ChallengesRouteImport } from './routes/challenges'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as JudgingRouteImport } from './routes/judging'
+import { Route as OrganizersRouteImport } from './routes/organizers'
+import { Route as ScheduleRouteImport } from './routes/schedule'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChallengesRoute = ChallengesRouteImport.update({
+  id: '/challenges',
+  path: '/challenges',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JudgingRoute = JudgingRouteImport.update({
+  id: '/judging',
+  path: '/judging',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrganizersRoute = OrganizersRouteImport.update({
+  id: '/organizers',
+  path: '/organizers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScheduleRoute = ScheduleRouteImport.update({
+  id: '/schedule',
+  path: '/schedule',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/challenges': typeof ChallengesRoute
+  '/faq': typeof FaqRoute
+  '/judging': typeof JudgingRoute
+  '/organizers': typeof OrganizersRoute
+  '/schedule': typeof ScheduleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/challenges': typeof ChallengesRoute
+  '/faq': typeof FaqRoute
+  '/judging': typeof JudgingRoute
+  '/organizers': typeof OrganizersRoute
+  '/schedule': typeof ScheduleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/challenges': typeof ChallengesRoute
+  '/faq': typeof FaqRoute
+  '/judging': typeof JudgingRoute
+  '/organizers': typeof OrganizersRoute
+  '/schedule': typeof ScheduleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/challenges'
+    | '/faq'
+    | '/judging'
+    | '/organizers'
+    | '/schedule'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/challenges'
+    | '/faq'
+    | '/judging'
+    | '/organizers'
+    | '/schedule'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/challenges'
+    | '/faq'
+    | '/judging'
+    | '/organizers'
+    | '/schedule'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ChallengesRoute: typeof ChallengesRoute
+  FaqRoute: typeof FaqRoute
+  JudgingRoute: typeof JudgingRoute
+  OrganizersRoute: typeof OrganizersRoute
+  ScheduleRoute: typeof ScheduleRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges': {
+      id: '/challenges'
+      path: '/challenges'
+      fullPath: '/challenges'
+      preLoaderRoute: typeof ChallengesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/judging': {
+      id: '/judging'
+      path: '/judging'
+      fullPath: '/judging'
+      preLoaderRoute: typeof JudgingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/organizers': {
+      id: '/organizers'
+      path: '/organizers'
+      fullPath: '/organizers'
+      preLoaderRoute: typeof OrganizersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schedule': {
+      id: '/schedule'
+      path: '/schedule'
+      fullPath: '/schedule'
+      preLoaderRoute: typeof ScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ChallengesRoute: ChallengesRoute,
+  FaqRoute: FaqRoute,
+  JudgingRoute: JudgingRoute,
+  OrganizersRoute: OrganizersRoute,
+  ScheduleRoute: ScheduleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

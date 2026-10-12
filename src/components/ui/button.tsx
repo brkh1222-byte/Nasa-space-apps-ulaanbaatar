@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm text-sm font-semibold cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-bold [text-box:trim-both_cap_alphabetic] cursor-pointer transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -16,16 +16,23 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        event: "bg-primary text-primary-foreground shadow-none hover:-translate-y-0.5 hover:bg-primary/90",
+        event:
+          "bg-primary text-primary-foreground shadow-none hover:-translate-y-0.5 hover:bg-primary/90",
         eventOutline:
           "border border-border bg-transparent text-foreground shadow-none hover:border-foreground hover:bg-secondary",
         inverse:
           "bg-primary-foreground text-primary shadow-none hover:-translate-y-0.5 hover:bg-primary-foreground/90",
+        register: "bg-neon text-deep shadow-none hover:-translate-y-0.5 hover:brightness-95",
+        brand: "bg-electric text-white shadow-none hover:-translate-y-0.5 hover:bg-electric/90",
+        outlineBrand:
+          "border-2 border-line bg-white text-deep shadow-none hover:border-electric hover:text-electric",
+        outlineLight:
+          "border-2 border-white/40 bg-transparent text-white shadow-none hover:border-white hover:bg-white/10",
       },
       size: {
         default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-12 px-6",
+        sm: "h-9 px-3.5 text-[13px]",
+        lg: "h-12 px-6 text-[15px]",
         icon: "h-9 w-9",
       },
     },
