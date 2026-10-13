@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, Instagram, Mail, Monitor, Users } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Facebook, Instagram, Mail, Monitor, Users } from "lucide-react";
 
 import {
   Accordion,
@@ -332,6 +332,11 @@ function ContactCard() {
           </ExternalLink>
         </Button>
         <Button asChild variant="outlineLight">
+          <ExternalLink href={contact.questaFacebook}>
+            <Facebook aria-hidden="true" /> Facebook
+          </ExternalLink>
+        </Button>
+        <Button asChild variant="outlineLight">
           <ExternalLink href={officialUrls.participantFaqs}>
             {t({ en: "Official FAQs", mn: "Албан ёсны FAQ" })} <ArrowUpRight aria-hidden="true" />
           </ExternalLink>
@@ -364,6 +369,11 @@ export function OrganizersPage() {
                   <Instagram aria-hidden="true" /> {t(organizers.followQuesta)}
                 </ExternalLink>
               </Button>
+              <Button asChild variant="outlineBrand" size="lg">
+                <ExternalLink href={contact.questaFacebook}>
+                  <Facebook aria-hidden="true" /> Facebook
+                </ExternalLink>
+              </Button>
             </div>
           </Reveal>
         </Container>
@@ -376,14 +386,29 @@ export function OrganizersPage() {
           </Reveal>
           <Reveal className="grid content-start gap-4 rounded-2xl bg-white p-7">
             <p className="font-semibold text-deep">{t(organizers.partnerCta)}</p>
-            <p className="flex items-center gap-2 text-muted-foreground">
-              <Mail className="size-4" aria-hidden="true" /> {contact.email || t(footer.emailSoon)}
-            </p>
+            {contact.email ? (
+              <a
+                href={`mailto:${contact.email}`}
+                className="flex items-center gap-2 font-semibold text-electric hover:text-deep"
+              >
+                <Mail className="size-4" aria-hidden="true" /> {contact.email}
+              </a>
+            ) : (
+              <p className="flex items-center gap-2 text-muted-foreground">
+                <Mail className="size-4" aria-hidden="true" /> {t(footer.emailSoon)}
+              </p>
+            )}
             <ExternalLink
               href={contact.questaInstagram}
               className="flex items-center gap-2 font-semibold text-electric hover:text-deep"
             >
               <Instagram className="size-4" aria-hidden="true" /> {contact.questaInstagramHandle}
+            </ExternalLink>
+            <ExternalLink
+              href={contact.questaFacebook}
+              className="flex items-center gap-2 font-semibold text-electric hover:text-deep"
+            >
+              <Facebook className="size-4" aria-hidden="true" /> Questa Facebook
             </ExternalLink>
           </Reveal>
         </Container>

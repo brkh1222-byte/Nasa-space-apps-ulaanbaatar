@@ -4,6 +4,7 @@ import {
   ArrowRight,
   CalendarDays,
   Coins,
+  Facebook,
   Globe2,
   Instagram,
   Languages,
@@ -34,7 +35,6 @@ import {
 } from "@/content/site-content";
 import { useLanguage } from "@/lib/language";
 
-import { ChallengeCard } from "./challenges";
 import {
   Container,
   Eyebrow,
@@ -48,7 +48,6 @@ import {
 } from "./primitives";
 
 const factIcons = [CalendarDays, MapPin, Globe2, Coins, Languages];
-const teaserCodes = ["06", "03", "12"];
 
 export function HomePage() {
   return (
@@ -238,12 +237,9 @@ export function HowItWorks() {
 
 function ChallengeTeaser() {
   const { t } = useLanguage();
-  const items = teaserCodes
-    .map((code) => challenges.items.find((item) => item.code === code))
-    .filter((item) => item !== undefined);
   return (
     <section className="py-24 md:py-32">
-      <Container className="grid gap-12">
+      <Container>
         <Reveal className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading eyebrow={challenges.eyebrow} title={challenges.teaserTitle} />
           <Button asChild variant="outlineBrand" size="lg" className="self-start md:self-auto">
@@ -252,13 +248,6 @@ function ChallengeTeaser() {
             </Link>
           </Button>
         </Reveal>
-        <div className="grid gap-4 md:grid-cols-3">
-          {items.map((item, index) => (
-            <Reveal key={item.code} delay={index * 0.06} className="h-full">
-              <ChallengeCard item={item} compact />
-            </Reveal>
-          ))}
-        </div>
       </Container>
     </section>
   );
@@ -279,6 +268,11 @@ function HostedByQuesta() {
           <Button asChild variant="outlineLight" size="lg">
             <ExternalLink href={contact.questaInstagram}>
               <Instagram aria-hidden="true" /> {contact.questaInstagramHandle}
+            </ExternalLink>
+          </Button>
+          <Button asChild variant="outlineLight" size="lg">
+            <ExternalLink href={contact.questaFacebook}>
+              <Facebook aria-hidden="true" /> Facebook
             </ExternalLink>
           </Button>
           <Button asChild variant="outlineLight" size="lg">

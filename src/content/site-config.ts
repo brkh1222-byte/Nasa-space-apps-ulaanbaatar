@@ -6,10 +6,10 @@ export const SITE_URL = (
 export const SITE_NAME = "NASA Space Apps Challenge Ulaanbaatar 2026";
 
 export const contact = {
-  // Leave empty until the official address is confirmed; the site shows "coming soon" instead.
-  email: "",
+  email: "hello@spaceappsulaanbaatar.com",
   questaInstagram: "https://www.instagram.com/questastem/",
   questaInstagramHandle: "@questastem",
+  questaFacebook: "https://www.facebook.com/share/1DiwbMB9Xk/",
 };
 
 export const officialUrls = {

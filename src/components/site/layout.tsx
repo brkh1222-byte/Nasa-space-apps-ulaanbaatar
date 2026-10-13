@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Instagram, Mail, Menu, X } from "lucide-react";
+import { Facebook, Instagram, Mail, Menu, X } from "lucide-react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 
 import { contact, officialUrls, spaceAppsSocials } from "@/content/site-config";
@@ -101,61 +101,63 @@ function SiteHeader() {
   const tone = solid ? "dark" : "light";
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,height] duration-300",
-        solid
-          ? "h-16 bg-white/95 shadow-[0_1px_0_var(--line)] backdrop-blur-md"
-          : "h-20 bg-transparent",
-      )}
-    >
-      <Container className="flex h-full items-center justify-between gap-6">
-        <Link
-          to="/"
-          className="shrink-0 rounded-md"
-          aria-label="NASA Space Apps Challenge Ulaanbaatar, home"
-        >
-          <Lockup tone={tone} compact />
-        </Link>
-        <nav className="hidden items-center gap-5 xl:flex 2xl:gap-7" aria-label="Primary">
-          {navItems.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className={cn(
-                "relative whitespace-nowrap text-sm font-semibold transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all hover:after:w-full",
-                tone === "light"
-                  ? "text-white/85 hover:text-white"
-                  : "text-muted-foreground hover:text-deep",
-              )}
-              activeProps={{
-                className: cn("after:w-full", tone === "light" ? "!text-white" : "!text-deep"),
-              }}
-            >
-              {t(item.label)}
-            </Link>
-          ))}
-        </nav>
-        <div className="flex items-center gap-2.5">
-          <div className="hidden sm:block">
-            <LanguageSwitch tone={tone} />
-          </div>
-          <RegisterButton size="sm" className="hidden md:inline-flex" />
-          <button
-            type="button"
-            onClick={() => setOpen(!open)}
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-            aria-label={open ? t(ui.close) : t(ui.menu)}
-            className={cn(
-              "grid size-10 place-items-center rounded-lg xl:hidden",
-              tone === "light" ? "text-white hover:bg-white/10" : "text-deep hover:bg-mist",
-            )}
+    <>
+      <header
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,height] duration-300",
+          solid
+            ? "h-16 bg-white/95 shadow-[0_1px_0_var(--line)] backdrop-blur-md"
+            : "h-20 bg-transparent",
+        )}
+      >
+        <Container className="flex h-full items-center justify-between gap-6">
+          <Link
+            to="/"
+            className="shrink-0 rounded-md"
+            aria-label="NASA Space Apps Challenge Ulaanbaatar, home"
           >
-            {open ? <X className="size-6" /> : <Menu className="size-6" />}
-          </button>
-        </div>
-      </Container>
+            <Lockup tone={tone} compact />
+          </Link>
+          <nav className="hidden items-center gap-5 xl:flex 2xl:gap-7" aria-label="Primary">
+            {navItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className={cn(
+                  "relative whitespace-nowrap text-sm font-semibold transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-all hover:after:w-full",
+                  tone === "light"
+                    ? "text-white/85 hover:text-white"
+                    : "text-muted-foreground hover:text-deep",
+                )}
+                activeProps={{
+                  className: cn("after:w-full", tone === "light" ? "!text-white" : "!text-deep"),
+                }}
+              >
+                {t(item.label)}
+              </Link>
+            ))}
+          </nav>
+          <div className="flex items-center gap-2.5">
+            <div className="hidden sm:block">
+              <LanguageSwitch tone={tone} />
+            </div>
+            <RegisterButton size="sm" className="hidden md:inline-flex" />
+            <button
+              type="button"
+              onClick={() => setOpen(!open)}
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+              aria-label={open ? t(ui.close) : t(ui.menu)}
+              className={cn(
+                "grid size-10 place-items-center rounded-lg xl:hidden",
+                tone === "light" ? "text-white hover:bg-white/10" : "text-deep hover:bg-mist",
+              )}
+            >
+              {open ? <X className="size-6" /> : <Menu className="size-6" />}
+            </button>
+          </div>
+        </Container>
+      </header>
       <AnimatePresence>
         {open && (
           <motion.div
@@ -164,7 +166,7 @@ function SiteHeader() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 bottom-0 top-16 flex flex-col overflow-y-auto bg-white xl:hidden"
+            className="fixed inset-x-0 bottom-0 top-16 z-50 flex flex-col overflow-y-auto bg-white xl:hidden"
           >
             <Container className="flex flex-1 flex-col gap-8 py-8">
               <nav className="grid gap-1" aria-label="Mobile">
@@ -200,7 +202,7 @@ function SiteHeader() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
 
@@ -278,6 +280,12 @@ function SiteFooter() {
             >
               <Instagram className="size-4" aria-hidden="true" /> Questa{" "}
               {contact.questaInstagramHandle}
+            </ExternalLink>
+            <ExternalLink
+              href={contact.questaFacebook}
+              className="flex items-center gap-2 text-sm hover:text-white"
+            >
+              <Facebook className="size-4" aria-hidden="true" /> Questa Facebook
             </ExternalLink>
             <p className="mt-4 font-display text-sm font-bold text-white">
               {t(footer.followSpaceApps)}
