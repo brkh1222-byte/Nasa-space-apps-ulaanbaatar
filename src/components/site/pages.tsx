@@ -135,17 +135,14 @@ export function SchedulePage() {
                     </p>
                     <h2 className="mt-1 text-2xl font-bold text-deep md:text-3xl">{t(day.date)}</h2>
                   </div>
-                  <span className="rounded-full bg-mist px-3 py-1 text-xs font-semibold text-muted-foreground">
-                    {t(schedule.provisional)}
-                  </span>
                 </div>
                 <ol>
                   {day.items.map((item) => {
-                    const key = "key" in item && item.key;
+                    const key = item.key;
                     return (
                       <li
                         key={item.time}
-                        className="grid grid-cols-[4.5rem_1fr] items-baseline gap-4 border-b border-line py-5"
+                        className="grid items-baseline gap-1 border-b border-line py-5 sm:grid-cols-[8.5rem_1fr] sm:gap-4"
                       >
                         <time className="font-display text-lg font-semibold tabular-nums text-muted-foreground">
                           {item.time}
@@ -163,6 +160,11 @@ export function SchedulePage() {
                             <span className="rounded-full bg-deep px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-neon">
                               {t(schedule.keyMoment)}
                             </span>
+                          )}
+                          {item.note && (
+                            <p className="basis-full leading-7 text-muted-foreground">
+                              {t(item.note)}
+                            </p>
                           )}
                         </div>
                       </li>
@@ -186,24 +188,42 @@ export function JudgingPage() {
       <PageHero eyebrow={judging.eyebrow} title={judging.title} intro={judging.pageIntro} />
       <section className="py-20 md:py-28">
         <Container className="grid gap-14">
-          <Reveal className="grid gap-5 lg:grid-cols-[1fr_1fr] lg:gap-20">
-            <p className="text-xl leading-9 text-deep">{t(judging.intro)}</p>
-            <p className="self-start border-l-4 border-electric bg-mist px-5 py-4 font-semibold text-deep">
-              {t(judging.prizes)}
-            </p>
+          <Reveal>
+            <p className="max-w-3xl text-xl leading-9 text-deep">{t(judging.intro)}</p>
           </Reveal>
+          <div className="grid gap-6">
+            <Reveal>
+              <h2 className="text-2xl font-bold text-deep md:text-3xl">{t(judging.awardsTitle)}</h2>
+            </Reveal>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {judging.awards.map((award) => (
+                <Reveal key={award.title.en} className="h-full">
+                  <article className="h-full rounded-2xl border border-line p-6">
+                    <p className="font-display text-4xl font-black text-electric">{award.mark}</p>
+                    <h3 className="mt-6 text-xl font-bold text-deep">{t(award.title)}</h3>
+                    <p className="mt-2 leading-7 text-muted-foreground">{t(award.text)}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal>
+              <p className="border-l-4 border-electric bg-mist px-5 py-4 font-semibold text-deep">
+                {t(judging.awardsNote)}
+              </p>
+            </Reveal>
+          </div>
           <div className="grid gap-6">
             <Reveal>
               <h2 className="text-2xl font-bold text-deep md:text-3xl">
                 {t(judging.criteriaTitle)}
               </h2>
             </Reveal>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {judging.criteria.map((criterion) => (
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {judging.criteria.map((criterion, index) => (
                 <Reveal key={criterion.label.en} className="h-full">
                   <article className="h-full rounded-2xl border border-line p-6">
                     <p className="font-display text-4xl font-black text-electric">
-                      {criterion.value}
+                      {String(index + 1).padStart(2, "0")}
                     </p>
                     <h3 className="mt-6 text-xl font-bold text-deep">{t(criterion.label)}</h3>
                     <p className="mt-2 leading-7 text-muted-foreground">{t(criterion.text)}</p>
@@ -212,6 +232,67 @@ export function JudgingPage() {
               ))}
             </div>
           </div>
+          <Reveal className="grid gap-6 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
+            <div>
+              <h2 className="text-2xl font-bold text-deep md:text-3xl">
+                {t(judging.submissionTitle)}
+              </h2>
+              <p className="mt-4 leading-7 text-muted-foreground">{t(judging.submissionIntro)}</p>
+            </div>
+            <div>
+              <ul className="grid gap-3">
+                {judging.submission.map((item) => (
+                  <li key={item.en} className="flex gap-3 leading-7 text-deep">
+                    <span
+                      aria-hidden="true"
+                      className="mt-2.5 size-2 shrink-0 rounded-full bg-electric"
+                    />
+                    {t(item)}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 border-l-4 border-electric bg-mist px-5 py-4 font-semibold text-deep">
+                {t(judging.submissionNote)}
+              </p>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+      <section className="py-20 md:py-28">
+        <Container className="grid gap-6">
+          <Reveal>
+            <h2 className="text-2xl font-bold text-deep md:text-3xl">{t(judging.judgesTitle)}</h2>
+            <p className="mt-4 max-w-2xl leading-7 text-muted-foreground">
+              {t(judging.judgesIntro)}
+            </p>
+          </Reveal>
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {judging.judges.map((judge, index) => (
+              <Reveal key={index} className="h-full">
+                <li className="flex h-full flex-col rounded-2xl border border-line bg-white p-6">
+                  <div className="grid h-24 place-items-center rounded-xl bg-mist px-6">
+                    {judge.logo ? (
+                      <img
+                        src={judge.logo}
+                        alt={t(judge.organization)}
+                        className="max-h-14 w-auto max-w-full object-contain"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <span className="text-center font-display text-lg font-bold text-deep">
+                        {t(judge.organization)}
+                      </span>
+                    )}
+                  </div>
+                  {judge.name && <p className="mt-5 text-lg font-bold text-deep">{judge.name}</p>}
+                  <p className={cn("font-semibold text-deep", judge.name ? "mt-1" : "mt-5")}>
+                    {t(judge.role)}
+                  </p>
+                  <p className="text-muted-foreground">{t(judge.organization)}</p>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
         </Container>
       </section>
       <section className="bg-mist py-20 md:py-28">
@@ -230,12 +311,12 @@ export function JudgingPage() {
             </ol>
           </Reveal>
           <Reveal>
-            <h2 className="text-2xl font-bold text-deep md:text-3xl">{t(judging.peopleTitle)}</h2>
+            <h2 className="text-2xl font-bold text-deep md:text-3xl">{t(judging.mentorsTitle)}</h2>
             <div className="mt-8 rounded-2xl border border-dashed border-line bg-white p-7">
               <span className="text-xs font-bold uppercase tracking-[0.14em] text-electric">
                 {t(ui.comingSoon)}
               </span>
-              <p className="mt-3 leading-7 text-muted-foreground">{t(judging.peopleText)}</p>
+              <p className="mt-3 leading-7 text-muted-foreground">{t(judging.mentorsText)}</p>
             </div>
           </Reveal>
         </Container>

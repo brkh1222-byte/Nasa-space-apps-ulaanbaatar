@@ -476,147 +476,303 @@ export const challenges = {
   ] as Challenge[],
 };
 
-// TODO(content): confirm times once the venue is booked.
 export const schedule = {
-  eyebrow: { en: "Two-day schedule", mn: "Хоёр өдрийн хөтөлбөр" },
-  title: {
-    en: "A focused weekend to make something matter",
-    mn: "Үнэ цэнтэй зүйл бүтээх хоёр өдөр",
-  },
+  eyebrow: { en: "14–15 November 2026", mn: "2026.11.14–15" },
+  title: { en: "Schedule", mn: "Хөтөлбөр" },
   pageIntro: {
-    en: "The provisional programme for Saturday and Sunday. Final times will be confirmed with the venue.",
-    mn: "Бямба, Ням гарагийн урьдчилсан хөтөлбөр. Эцсийн цагийг байршил баталгаажсаны дараа мэдэгдэнэ.",
+    en: "Two days in Ulaanbaatar. Venue to be announced.",
+    mn: "Улаанбаатарт хоёр өдөр. Байршлыг удахгүй зарлана.",
   },
-  provisional: { en: "Provisional", mn: "Урьдчилсан" },
   keyMoment: { en: "Key moment", mn: "Чухал үе" },
   days: [
     {
       label: { en: "Day 1", mn: "1-р өдөр" },
       date: { en: "Saturday · 14 November", mn: "Бямба · 11-р сарын 14" },
       items: [
+        { time: "09:00", title: { en: "Registration", mn: "Бүртгэл" } },
         {
-          time: "08:30",
-          title: { en: "Doors open and check-in", mn: "Хаалга нээгдэж, бүртгэл эхэлнэ" },
-        },
-        { time: "09:30", title: { en: "Opening briefing", mn: "Нээлтийн танилцуулга" } },
-        {
-          time: "10:30",
+          time: "10:00",
           title: {
-            en: "Team formation and challenge selection",
-            mn: "Баг бүрдүүлэлт ба сорилт сонголт",
+            en: "Opening remarks, programme and logistics, team formation",
+            mn: "Нээлтийн үг, хөтөлбөр болон зохион байгуулалтын мэдээлэл, баг бүрдүүлэлт",
           },
         },
         {
-          time: "12:00",
-          title: { en: "Build session begins", mn: "Бүтээлийн ажил эхэлнэ" },
+          time: "10:30",
+          title: { en: "Mentor and team briefing", mn: "Ментор болон багуудын мэдээлэл" },
+        },
+        {
+          time: "11:00",
+          title: { en: "Hacking begins", mn: "Төсөл боловсруулалт эхэлнэ" },
           key: true,
         },
-        { time: "18:00", title: { en: "Mentor checkpoint", mn: "Менторын зөвлөгөө" } },
+        {
+          time: "12:30",
+          title: {
+            en: "Lunch, optional activities and speakers",
+            mn: "Өдрийн хоол, сонголттой үйл ажиллагаа, илтгэгч",
+          },
+        },
+        { time: "13:30", title: { en: "Hacking continues", mn: "Төсөл боловсруулалт үргэлжилнэ" } },
+        {
+          time: "16:30",
+          title: {
+            en: "Progress check-in, hacking continues",
+            mn: "Явцын шалгалт, төсөл боловсруулалт үргэлжилнэ",
+          },
+        },
+        { time: "18:30", title: { en: "Dinner and activities", mn: "Оройн хоол, үйл ажиллагаа" } },
+        {
+          time: "20:00",
+          title: {
+            en: "Social event and briefing for Day 2",
+            mn: "Нөхөрсөг уулзалт, дараагийн өдрийн хөтөлбөрийн мэдээлэл",
+          },
+        },
       ],
     },
     {
       label: { en: "Day 2", mn: "2-р өдөр" },
       date: { en: "Sunday · 15 November", mn: "Ням · 11-р сарын 15" },
       items: [
-        { time: "09:00", title: { en: "Build session resumes", mn: "Бүтээлийн ажил үргэлжилнэ" } },
-        { time: "12:00", title: { en: "Submission clinic", mn: "Бүтээл илгээх зөвлөгөө" } },
         {
-          time: "15:00",
-          title: { en: "Project submissions close", mn: "Бүтээл хүлээн авах хугацаа дуусна" },
+          time: "09:00–09:30",
+          title: {
+            en: "Day logistics and announcements",
+            mn: "Өдрийн зохион байгуулалт, мэдээлэл",
+          },
+        },
+        {
+          time: "09:30–10:00",
+          title: { en: "Check-in and progress update", mn: "Ирц бүртгэл, явцын мэдээлэл" },
+        },
+        { time: "10:00–13:00", title: { en: "Hacking", mn: "Төсөл боловсруулалт" } },
+        { time: "13:00–14:00", title: { en: "Lunch", mn: "Өдрийн хоол" } },
+        {
+          time: "14:00–19:00",
+          title: {
+            en: "Final build and submission preparation",
+            mn: "Эцсийн боловсруулалт, илгээх бэлтгэл",
+          },
+        },
+        {
+          time: "19:00",
+          title: {
+            en: "Local submission deadline",
+            mn: "Орон нутгийн шүүлтэд илгээх эцсийн хугацаа",
+          },
           key: true,
         },
-        { time: "16:00", title: { en: "Team presentations", mn: "Багуудын танилцуулга" } },
         {
-          time: "18:30",
-          title: { en: "Local awards and closing", mn: "Орон нутгийн шагнал ба хаалт" },
+          time: "19:00–21:00",
+          title: { en: "Local judging", mn: "Орон нутгийн шүүлт" },
+          note: {
+            en: "While the judges deliberate: dinner for participants and free time for networking.",
+            mn: "Шүүгчид үнэлж байх хооронд оролцогчдод оройн хоол, чөлөөт цаг, танилцах боломж.",
+          },
+        },
+        {
+          time: "21:15",
+          title: { en: "Awards ceremony", mn: "Шагнал гардуулах ёслол" },
           key: true,
+        },
+        {
+          time: "23:59",
+          title: {
+            en: "Official NASA project submission closes",
+            mn: "NASA-гийн албан ёсны төсөл илгээх хугацаа дуусна",
+          },
+          key: true,
+          note: {
+            en: "Teams can keep polishing their project and get submission support until the global deadline.",
+            mn: "Багууд дэлхийн шатны эцсийн хугацаа хүртэл төслөө сайжруулж, илгээхэд нь туслалцаа авах боломжтой.",
+          },
         },
       ],
     },
-  ],
-} as const;
+  ] as Array<{
+    label: Localized;
+    date: Localized;
+    items: Array<{ time: string; title: Localized; key?: boolean; note?: Localized }>;
+  }>,
+};
 
-// TODO(content): confirm local prizes, award categories and the criteria weights.
 export const judging = {
   eyebrow: { en: "Judging & awards", mn: "Шалгаруулалт ба шагнал" },
-  title: {
-    en: "Good ideas are clear, useful and built to travel",
-    mn: "Сайн санаа ойлгомжтой, хэрэгцээтэй, цаашид хөгжих боломжтой байдаг",
-  },
+  title: { en: "Judging", mn: "Шалгаруулалт" },
   pageIntro: {
-    en: "How projects are judged in Ulaanbaatar and how local nominees reach NASA Global Judging.",
-    mn: "Улаанбаатарт төслүүдийг хэрхэн үнэлдэг, шилдэг багууд NASA-гийн дэлхийн шатны шалгаруулалтад хэрхэн шалгардаг тухай.",
+    en: "How projects are judged, and who goes on to Global Judging.",
+    mn: "Төслүүдийг хэрхэн үнэлж, хэн дэлхийн шатанд нэр дэвших тухай.",
   },
   intro: {
-    en: "Local judges assess each eligible project using the NASA Space Apps criteria. Local nominees advance to NASA Global Judging and are considered for Global Awards.",
-    mn: "Орон нутгийн шүүгчид шаардлага хангасан бүтээл бүрийг NASA Space Apps-ийн шалгуураар үнэлнэ. Нэр дэвшсэн багууд NASA-гийн дэлхийн шатны шалгаруулалтад оролцож, Global Awards-ын төлөө өрсөлдөнө.",
+    en: "A panel of local judges assesses each eligible project using the official NASA Space Apps criteria. Four teams are recognised in Ulaanbaatar.",
+    mn: "Орон нутгийн шүүгчдийн бүрэлдэхүүн шаардлага хангасан төсөл бүрийг NASA Space Apps-ийн албан ёсны шалгуураар үнэлнэ. Улаанбаатарт нийт дөрвөн багийг шалгаруулна.",
+  },
+  awardsTitle: { en: "Local awards", mn: "Орон нутгийн шагнал" },
+  awards: [
+    {
+      mark: "I",
+      title: { en: "1st place", mn: "I байр" },
+      text: {
+        en: "Global Nominee from Mongolia and a certificate.",
+        mn: "Монголоос дэлхийн шатанд нэр дэвшинэ. Сертификат олгоно.",
+      },
+    },
+    {
+      mark: "II",
+      title: { en: "2nd place", mn: "II байр" },
+      text: {
+        en: "Global Nominee from Mongolia and a certificate.",
+        mn: "Монголоос дэлхийн шатанд нэр дэвшинэ. Сертификат олгоно.",
+      },
+    },
+    {
+      mark: "III",
+      title: { en: "3rd place", mn: "III байр" },
+      text: {
+        en: "Global Nominee from Mongolia and a certificate.",
+        mn: "Монголоос дэлхийн шатанд нэр дэвшинэ. Сертификат олгоно.",
+      },
+    },
+    {
+      mark: "★",
+      title: { en: "Seed Academy Special Prize", mn: "Seed Academy-ийн тусгай шагнал" },
+      text: {
+        en: "A special prize awarded by Seed Academy to one more team.",
+        mn: "Seed Academy-аас нэг багт олгох тусгай шагнал.",
+      },
+    },
+  ],
+  awardsNote: {
+    en: "The three Global Nominees go on to NASA Global Judging, provided their projects meet the official submission requirements.",
+    mn: "Дэлхийн шатанд нэр дэвшсэн гурван баг албан ёсны илгээх шаардлагыг хангасан тохиолдолд NASA-гийн дэлхийн шатны шалгаруулалтад оролцоно.",
   },
   criteriaTitle: { en: "Judging criteria", mn: "Үнэлгээний шалгуур" },
   criteria: [
     {
-      value: "25%",
       label: { en: "Impact", mn: "Үр нөлөө" },
       text: {
-        en: "How much the project could matter to people or science.",
-        mn: "Төсөл хүмүүс болон шинжлэх ухаанд хэр их ач холбогдолтой вэ.",
+        en: "How well it addresses a real problem, and the difference it could make.",
+        mn: "Бодит асуудлыг хэрхэн шийдэж, ямар үр нөлөө үзүүлэх вэ.",
       },
     },
     {
-      value: "25%",
       label: { en: "Creativity", mn: "Бүтээлч байдал" },
       text: {
-        en: "How original the idea and its approach are.",
-        mn: "Санаа болон шийдлийн арга хэр шинэлэг вэ.",
+        en: "How new, inventive and original the approach is.",
+        mn: "Арга барил хэр шинэлэг, бүтээлч, өвөрмөц вэ.",
       },
     },
     {
-      value: "25%",
       label: { en: "Validity", mn: "Үндэслэл" },
       text: {
-        en: "Whether the solution is sound and actually works.",
-        mn: "Шийдэл үндэслэлтэй, бодитоор ажилладаг эсэх.",
+        en: "Whether it is scientifically and technically sound, and could really be built.",
+        mn: "Шинжлэх ухаан, техникийн хувьд үндэслэлтэй, бодитоор хэрэгжих боломжтой эсэх.",
       },
     },
     {
-      value: "25%",
       label: { en: "Relevance", mn: "Нийцэл" },
       text: {
-        en: "How directly it answers the chosen NASA challenge.",
-        mn: "Сонгосон NASA-гийн сорилтод хэр оновчтой хариулж байна вэ.",
+        en: "How closely it answers the chosen challenge.",
+        mn: "Сонгосон сорилттой хэр нийцэж байна вэ.",
+      },
+    },
+    {
+      label: { en: "Presentation", mn: "Танилцуулга" },
+      text: {
+        en: "How clearly and effectively the team presents its idea, solution and results.",
+        mn: "Санаа, шийдэл, үр дүнгээ хэр ойлгомжтой, үр дүнтэй танилцуулсан бэ.",
       },
     },
   ],
   pathTitle: { en: "From Ulaanbaatar to Global Judging", mn: "Улаанбаатараас дэлхийн шат хүртэл" },
   path: [
     {
-      en: "Teams submit projects on the official site by Sunday 15:00",
-      mn: "Багууд Ням гарагийн 15:00 цаг хүртэл албан ёсны сайтад бүтээлээ илгээнэ",
+      en: "Teams submit their projects for local judging by Sunday 19:00",
+      mn: "Багууд Ням гарагийн 19:00 цаг хүртэл орон нутгийн шүүлтэд төслөө илгээнэ",
     },
     {
-      en: "Local judges review and hear team presentations",
-      mn: "Орон нутгийн шүүгчид бүтээлүүдийг үнэлж, танилцуулгыг сонсоно",
+      en: "Local judges review the projects from 19:00 to 21:00",
+      mn: "Орон нутгийн шүүгчид 19:00–21:00 цагийн хооронд төслүүдийг үнэлнэ",
     },
     {
-      en: "Ulaanbaatar nominees are announced at the closing",
-      mn: "Хаалтын үеэр Улаанбаатарын нэр дэвшигчдийг зарлана",
+      en: "Winners and Global Nominees are announced at the awards ceremony at 21:15",
+      mn: "21:15 цагаас эхлэх шагнал гардуулах ёслолоор шалгарсан багууд болон нэр дэвшигчдийг зарлана",
     },
     {
-      en: "Nominees enter NASA Global Judging for the Global Awards",
-      mn: "Нэр дэвшигчид NASA-гийн дэлхийн шатны шалгаруулалтад оролцоно",
+      en: "Every team completes its official NASA submission by 23:59, and nominees enter NASA Global Judging",
+      mn: "Бүх баг 23:59 цаг хүртэл NASA-д албан ёсоор илгээж, нэр дэвшсэн багууд NASA-гийн дэлхийн шатны шалгаруулалтад орно",
     },
   ],
-  prizes: {
-    en: "Local award and prize details will be announced.",
-    mn: "Орон нутгийн шагналын дэлгэрэнгүйг удахгүй зарлана.",
+  submissionTitle: { en: "What to submit", mn: "Юу илгээх вэ" },
+  submissionIntro: {
+    en: "Every team submits through the official NASA Space Apps project submission system.",
+    mn: "Баг бүр NASA Space Apps-ийн албан ёсны төсөл илгээх системээр төслөө илгээнэ.",
   },
-  peopleTitle: { en: "Mentors & judges", mn: "Ментор ба шүүгчид" },
-  peopleText: {
-    en: "We are inviting leaders across science, technology, design, data, business and storytelling. Confirmed names will appear here.",
-    mn: "Шинжлэх ухаан, технологи, дизайн, өгөгдөл, бизнес, контент бүтээлийн салбарын манлайлагчдыг урьж байна. Баталгаажсан нэрсийг энд нийтэлнэ.",
+  submission: [
+    {
+      en: "High-level summary: what the project is, why it matters and how it answers the challenge",
+      mn: "Товч тойм: төсөл юу болох, яагаад чухал, сорилтыг хэрхэн шийдэж буй",
+    },
+    {
+      en: "Project demo: a 7-slide presentation or a 30-second video",
+      mn: "Төслийн демо: 7 слайдтай танилцуулга эсвэл 30 секундийн видео",
+    },
+    {
+      en: "Final project link: a public link such as GitHub or Google Drive",
+      mn: "Төслийн холбоос: GitHub, Google Drive зэрэг олон нийтэд нээлттэй холбоос",
+    },
+    {
+      en: "Project details: how it works, the tools used and its goals",
+      mn: "Төслийн дэлгэрэнгүй: хэрхэн ажилладаг, ашигласан хэрэгсэл, зорилго",
+    },
+    {
+      en: "How you used AI and NASA or partner agency data",
+      mn: "AI болон NASA, хамтрагч агентлагийн өгөгдлийг хэрхэн ашигласан тухай",
+    },
+    {
+      en: "A list of the external sources, data, tools and open-source materials you used",
+      mn: "Ашигласан гадны эх сурвалж, өгөгдөл, хэрэгсэл, open-source материалын жагсаалт",
+    },
+  ],
+  submissionNote: {
+    en: "To be eligible for Global Awards, a project must use NASA data. “Choose Your Own Challenge” projects are not eligible for Global Judging.",
+    mn: "Global Awards-д хамрагдахын тулд төсөл NASA-гийн өгөгдөл ашигласан байх ёстой. «Choose Your Own Challenge» төслүүд дэлхийн шатны шалгаруулалтад хамрагдахгүй.",
   },
-  // TODO(content): add confirmed people as { name, role, organization }.
-  mentors: [] as Array<{ name: string; role: Localized; organization: string }>,
-  judges: [] as Array<{ name: string; role: Localized; organization: string }>,
+  judgesTitle: { en: "Judges", mn: "Шүүгчид" },
+  judgesIntro: {
+    en: "Four judges from education and academia review the Ulaanbaatar projects.",
+    mn: "Боловсрол, эрдэм шинжилгээний салбарын дөрвөн шүүгч Улаанбаатарын төслүүдийг үнэлнэ.",
+  },
+  // Logos live in public/brand/partners/. Leave `logo` empty to show the organization name instead.
+  // TODO(content): add the university name and logo files.
+  judges: [
+    {
+      role: { en: "Teacher", mn: "Багш" },
+      organization: { en: "Seed Academy", mn: "Seed Academy" },
+      logo: "",
+    },
+    {
+      role: { en: "Teacher", mn: "Багш" },
+      organization: { en: "Pinecone Academy", mn: "Pinecone Academy" },
+      logo: "",
+    },
+    {
+      role: { en: "Teacher", mn: "Багш" },
+      organization: { en: "Pinecone Academy", mn: "Pinecone Academy" },
+      logo: "",
+    },
+    {
+      role: { en: "Professor", mn: "Профессор" },
+      organization: { en: "University", mn: "Их сургууль" },
+      logo: "",
+    },
+  ] as Array<{ name?: string; role: Localized; organization: Localized; logo: string }>,
+  mentorsTitle: { en: "Mentors", mn: "Менторууд" },
+  mentorsText: {
+    en: "We are inviting mentors across science, technology, design, data, business and storytelling. Confirmed names will appear here.",
+    mn: "Шинжлэх ухаан, технологи, дизайн, өгөгдөл, бизнес, контент бүтээлийн салбарын менторуудыг урьж байна. Баталгаажсан нэрсийг энд нийтэлнэ.",
+  },
 } as const;
 
 export type FaqTopic = "registration" | "teams" | "participation" | "event" | "judging";
@@ -735,8 +891,24 @@ export const faqs = {
       topic: "judging",
       question: { en: "How are projects judged?", mn: "Төслүүдийг хэрхэн үнэлэх вэ?" },
       answer: {
-        en: "Local judges score projects on impact, creativity, validity and relevance. Local nominees go on to NASA Global Judging. See the Judging page for details.",
-        mn: "Орон нутгийн шүүгчид төслүүдийг үр нөлөө, бүтээлч байдал, үндэслэл, нийцэл гэсэн шалгуураар үнэлнэ. Шилдэг багууд NASA-гийн дэлхийн шатны шалгаруулалтад нэр дэвшинэ. Дэлгэрэнгүйг «Шалгаруулалт» хуудаснаас үзнэ үү.",
+        en: "Local judges score projects on impact, creativity, validity, relevance and presentation. The top three teams become Global Nominees from Mongolia, and Seed Academy awards one more team a special prize. See the Judging page for details.",
+        mn: "Орон нутгийн шүүгчид төслүүдийг үр нөлөө, бүтээлч байдал, үндэслэл, нийцэл, танилцуулга гэсэн шалгуураар үнэлнэ. Шилдэг гурван баг Монголоос дэлхийн шатанд нэр дэвшиж, Seed Academy өөр нэг багт тусгай шагнал олгоно. Дэлгэрэнгүйг «Шалгаруулалт» хуудаснаас үзнэ үү.",
+      },
+    },
+    {
+      topic: "judging",
+      question: { en: "When are the submission deadlines?", mn: "Төслөө хэзээ хүртэл илгээх вэ?" },
+      answer: {
+        en: "Submit for local judging by 19:00 on Sunday 15 November. The official NASA project submission stays open until 23:59 local time that night.",
+        mn: "Орон нутгийн шүүлтэд 11-р сарын 15-ны Ням гарагийн 19:00 цаг хүртэл илгээнэ. NASA-гийн албан ёсны төсөл илгээх систем тэр орой орон нутгийн цагаар 23:59 хүртэл нээлттэй.",
+      },
+    },
+    {
+      topic: "judging",
+      question: { en: "Are there cash prizes?", mn: "Мөнгөн шагнал бий юу?" },
+      answer: {
+        en: "No. The top three teams become Global Nominees from Mongolia and receive certificates, and Seed Academy awards a special prize to one more team.",
+        mn: "Үгүй. Шилдэг гурван баг Монголоос дэлхийн шатанд нэр дэвшиж, сертификат авна. Мөн Seed Academy өөр нэг багт тусгай шагнал олгоно.",
       },
     },
   ] as Array<{ topic: FaqTopic; featured?: boolean; question: Localized; answer: Localized }>,
