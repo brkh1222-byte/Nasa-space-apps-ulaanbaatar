@@ -145,6 +145,9 @@ export function SchedulePage() {
                       {t(day.label)}
                     </p>
                     <h2 className="mt-1 text-2xl font-bold text-deep md:text-3xl">{t(day.date)}</h2>
+                    {day.theme && (
+                      <p className="mt-2 font-medium text-muted-foreground">{t(day.theme)}</p>
+                    )}
                   </div>
                 </div>
                 <ol>
@@ -182,6 +185,9 @@ export function SchedulePage() {
                     );
                   })}
                 </ol>
+                {day.footnote && (
+                  <p className="mt-5 italic leading-7 text-muted-foreground">{t(day.footnote)}</p>
+                )}
               </article>
             </Reveal>
           ))}

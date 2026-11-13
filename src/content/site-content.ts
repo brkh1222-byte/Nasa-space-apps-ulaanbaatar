@@ -509,113 +509,126 @@ export const schedule = {
     {
       label: { en: "Day 1", mn: "1-р өдөр" },
       date: { en: "Saturday · 14 November", mn: "Бямба · 11-р сарын 14" },
+      theme: {
+        en: "Opening & Hackathon Kickoff · 14:00–20:00",
+        mn: "Нээлт ба хакатон эхлэл · 14:00–20:00",
+      },
       items: [
-        { time: "09:00", title: { en: "Registration", mn: "Бүртгэл" } },
         {
-          time: "10:00",
+          time: "14:00–14:30",
+          title: { en: "Participant registration", mn: "Оролцогчдын бүртгэл" },
+        },
+        { time: "14:30–15:00", title: { en: "Opening ceremony", mn: "Нээлтийн ёслол" } },
+        {
+          time: "15:00–15:30",
           title: {
-            en: "Opening remarks, programme and logistics, team formation",
-            mn: "Нээлтийн үг, хөтөлбөр болон зохион байгуулалтын мэдээлэл, баг бүрдүүлэлт",
+            en: "NASA Space Apps introduction, rules and challenge briefing",
+            mn: "NASA Space Apps-ийн танилцуулга, дүрэм, сорилтуудын тайлбар",
           },
         },
         {
-          time: "10:30",
-          title: { en: "Mentor and team introductions", mn: "Ментор болон багуудын танилцуулга" },
+          time: "15:30–16:00",
+          title: {
+            en: "Team formation and mentor introductions",
+            mn: "Баг бүрдүүлэлт, менторуудын танилцуулга",
+          },
         },
         {
-          time: "11:00",
-          title: { en: "Hacking begins", mn: "Төсөл боловсруулалт эхэлнэ" },
+          time: "16:00",
+          title: { en: "Official hackathon work begins", mn: "Хакатон албан ёсоор эхэлнэ" },
           key: true,
         },
         {
-          time: "12:30",
+          time: "16:00–18:00",
           title: {
-            en: "Lunch, optional activities and mentor meetings",
-            mn: "Өдрийн хоол, сонголттой үйл ажиллагаа, менторын уулзалт",
-          },
-        },
-        { time: "13:30", title: { en: "Hacking continues", mn: "Төсөл боловсруулалт үргэлжилнэ" } },
-        {
-          time: "16:30",
-          title: {
-            en: "Progress check-in, hacking continues",
-            mn: "Явцын шалгалт, төсөл боловсруулалт үргэлжилнэ",
-          },
-        },
-        { time: "18:30", title: { en: "Dinner and activities", mn: "Оройн хоол, үйл ажиллагаа" } },
-        {
-          time: "20:00",
-          title: {
-            en: "Social event and briefing for Day 2",
-            mn: "Нөхөрсөг уулзалт, дараагийн өдрийн хөтөлбөрийн мэдээлэл",
-          },
-        },
-      ],
-    },
-    {
-      label: { en: "Day 2", mn: "2-р өдөр" },
-      date: { en: "Sunday · 15 November", mn: "Ням · 11-р сарын 15" },
-      items: [
-        {
-          time: "09:00–09:30",
-          title: {
-            en: "Day logistics, announcements and reminders",
-            mn: "Өдрийн зохион байгуулалт, зарлал, сануулга",
-          },
-        },
-        {
-          time: "09:30–10:00",
-          title: {
-            en: "Participant check-in and project progress update",
-            mn: "Оролцогчдын ирц бүртгэл, төслийн явцын мэдээлэл",
-          },
-        },
-        { time: "10:00–13:00", title: { en: "Hacking", mn: "Төсөл боловсруулалт" } },
-        { time: "13:00–14:00", title: { en: "Lunch", mn: "Өдрийн хоол" } },
-        {
-          time: "14:00–18:00",
-          title: {
-            en: "Final build and submission preparation",
-            mn: "Төслөө эцэслэх, илгээх бэлтгэл",
+            en: "Challenge exploration and initial project development",
+            mn: "Сорилттой танилцах, төслийн анхны боловсруулалт",
           },
         },
         {
           time: "18:00–18:30",
-          title: {
-            en: "Final window to hand in project materials for local judging",
-            mn: "Орон нутгийн шүүлтэд оруулах төслийн материал хүлээн авах эцсийн цаг",
-          },
-          key: true,
+          title: { en: "Progress check and announcements", mn: "Явцын шалгалт, зарлал" },
         },
         {
           time: "18:30–19:30",
-          title: { en: "Local judging", mn: "Шүүгчдийн үнэлгээ" },
+          title: { en: "Networking and refreshments", mn: "Танилцах уулзалт, зууш" },
         },
         {
-          time: "19:30–21:00",
-          title: { en: "Local awards and closing ceremony", mn: "Шагнал гардуулах, хаалтын ёслол" },
-          key: true,
-        },
-        {
-          time: "21:00–23:59",
+          time: "19:30–20:00",
           title: {
-            en: "Technical support for every team to finalise and submit on the NASA platform",
-            mn: "Бүх багт NASA-гийн платформд төслөө эцэслэн илгээхэд техникийн туслалцаа",
+            en: "Day 2 instructions and closing announcements",
+            mn: "2-р өдрийн заавар, өдрийн хаалтын зарлал",
+          },
+        },
+      ],
+      footnote: {
+        en: "After 20:00, participants continue working on their projects from home.",
+        mn: "20:00 цагаас хойш оролцогчид төсөл дээрээ гэрээсээ үргэлжлүүлэн ажиллана.",
+      },
+    },
+    {
+      label: { en: "Day 2", mn: "2-р өдөр" },
+      date: { en: "Sunday · 15 November", mn: "Ням · 11-р сарын 15" },
+      theme: {
+        en: "Final Submission & Closing Ceremony · 18:00–00:00",
+        mn: "Эцсийн илгээлт ба хаалтын ёслол · 18:00–00:00",
+      },
+      items: [
+        {
+          time: "18:00–18:30",
+          title: {
+            en: "Participant check-in and final instructions",
+            mn: "Оролцогчдын ирц бүртгэл, эцсийн заавар",
           },
         },
         {
-          time: "23:59",
+          time: "18:30–19:30",
           title: {
-            en: "Official NASA project submission deadline",
-            mn: "NASA-д төслөө албан ёсоор илгээх эцсийн хугацаа",
+            en: "Final project development and submission preparation",
+            mn: "Төслийн эцсийн боловсруулалт, илгээх бэлтгэл",
+          },
+        },
+        {
+          time: "19:30–20:30",
+          title: {
+            en: "Local judging and project presentations",
+            mn: "Орон нутгийн шүүлт, төслийн танилцуулга",
           },
           key: true,
         },
+        { time: "20:30–21:00", title: { en: "Judges' deliberation", mn: "Шүүгчдийн хэлэлцүүлэг" } },
+        {
+          time: "21:00–21:30",
+          title: { en: "Local awards ceremony", mn: "Орон нутгийн шагнал гардуулах ёслол" },
+          key: true,
+        },
+        {
+          time: "21:30–22:30",
+          title: {
+            en: "Final project improvements and NASA submission support",
+            mn: "Төслийн эцсийн сайжруулалт, NASA-д илгээхэд туслалцаа",
+          },
+        },
+        {
+          time: "22:30–23:30",
+          title: { en: "Final submission checks", mn: "Илгээлтийн эцсийн шалгалт" },
+        },
+        {
+          time: "23:30–23:59",
+          title: {
+            en: "Official NASA submission deadline",
+            mn: "NASA-д албан ёсоор илгээх эцсийн хугацаа",
+          },
+          key: true,
+        },
+        { time: "23:59–00:00", title: { en: "Event closing", mn: "Арга хэмжээний хаалт" } },
       ],
     },
   ] as Array<{
     label: Localized;
     date: Localized;
+    theme?: Localized;
+    footnote?: Localized;
     items: Array<{ time: string; title: Localized; key?: boolean; note?: Localized }>;
   }>,
 };
@@ -711,16 +724,16 @@ export const judging = {
   pathTitle: { en: "From Ulaanbaatar to Global Judging", mn: "Улаанбаатараас дэлхийн шат хүртэл" },
   path: [
     {
-      en: "Teams hand in their project materials for local judging by Sunday 18:30",
-      mn: "Багууд Ням гарагийн 18:30 цаг хүртэл орон нутгийн шүүлтэд төслийн материалаа өгнө",
+      en: "Teams hand in their project materials for local judging by Sunday 19:30",
+      mn: "Багууд Ням гарагийн 19:30 цаг хүртэл орон нутгийн шүүлтэд төслийн материалаа өгнө",
     },
     {
-      en: "Local judges review the projects from 18:30 to 19:30",
-      mn: "Орон нутгийн шүүгчид 18:30–19:30 цагийн хооронд төслүүдийг үнэлнэ",
+      en: "Teams present to the local judges from 19:30 to 20:30, followed by deliberation",
+      mn: "Багууд 19:30–20:30 цагийн хооронд шүүгчдэд төслөө танилцуулж, дараа нь шүүгчид хэлэлцэнэ",
     },
     {
-      en: "Winners and Global Nominees are announced at the awards and closing ceremony at 19:30",
-      mn: "19:30 цагаас эхлэх шагнал гардуулах, хаалтын ёслолоор шалгарсан багууд болон нэр дэвшигчдийг зарлана",
+      en: "Winners and Global Nominees are announced at the local awards ceremony at 21:00",
+      mn: "21:00 цагаас эхлэх шагнал гардуулах ёслолоор шалгарсан багууд болон нэр дэвшигчдийг зарлана",
     },
     {
       en: "Every team completes its official NASA submission by 23:59, and nominees enter NASA Global Judging",
@@ -912,8 +925,8 @@ export const faqs = {
       topic: "judging",
       question: { en: "When are the submission deadlines?", mn: "Төслөө хэзээ хүртэл илгээх вэ?" },
       answer: {
-        en: "Hand in your project materials for local judging by 18:30 on Sunday 15 November. The official NASA project submission stays open until 23:59 local time that night.",
-        mn: "Орон нутгийн шүүлтэд 11-р сарын 15-ны Ням гарагийн 18:30 цаг хүртэл төслийн материалаа өгнө. NASA-гийн албан ёсны төсөл илгээх систем тэр орой орон нутгийн цагаар 23:59 хүртэл нээлттэй.",
+        en: "Hand in your project materials for local judging by 19:30 on Sunday 15 November. The official NASA project submission stays open until 23:59 local time that night.",
+        mn: "Орон нутгийн шүүлтэд 11-р сарын 15-ны Ням гарагийн 19:30 цаг хүртэл төслийн материалаа өгнө. NASA-гийн албан ёсны төсөл илгээх систем тэр орой орон нутгийн цагаар 23:59 хүртэл нээлттэй.",
       },
     },
     {
