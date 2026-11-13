@@ -28,6 +28,7 @@ export const navItems = [
   { to: "/about", label: { en: "About", mn: "Тухай" } },
   { to: "/challenges", label: { en: "Challenges", mn: "Сорилтууд" } },
   { to: "/schedule", label: { en: "Schedule", mn: "Хөтөлбөр" } },
+  { to: "/venue", label: { en: "Venue", mn: "Байршил" } },
   { to: "/judging", label: { en: "Judging", mn: "Шалгаруулалт" } },
   { to: "/faq", label: { en: "FAQ", mn: "Асуулт" } },
   { to: "/organizers", label: { en: "Organizers", mn: "Зохион байгуулагч" } },
@@ -58,8 +59,8 @@ export const keyFacts = [
   {
     label: { en: "Where", mn: "Хаана" },
     value: {
-      en: "Ulaanbaatar · venue to be announced",
-      mn: "Улаанбаатар · байршлыг удахгүй зарлана",
+      en: "EduPark, Khan-Uul District, Ulaanbaatar",
+      mn: "EduPark, Хан-Уул дүүрэг, Улаанбаатар",
     },
   },
   {
@@ -96,8 +97,8 @@ export const about = {
     {
       title: { en: "In person", mn: "Танхимаар" },
       text: {
-        en: "Build alongside the local community in Ulaanbaatar, with mentors, optional activities and the full event atmosphere. Venue to be announced.",
-        mn: "Улаанбаатар дахь хамт олонтойгоо нэгдэж, менторуудын зөвлөгөө авч, сонголттой үйл ажиллагаанд оролцон, арга хэмжээний уур амьсгал дунд хамтдаа бүтээнэ. Байршлыг удахгүй зарлана.",
+        en: "Build alongside the local community in Ulaanbaatar, with mentors, optional activities and the full event atmosphere at EduPark.",
+        mn: "Улаанбаатар дахь хамт олонтойгоо нэгдэж, менторуудын зөвлөгөө авч, сонголттой үйл ажиллагаанд оролцон, EduPark-д арга хэмжээний уур амьсгал дунд хамтдаа бүтээнэ.",
       },
     },
     {
@@ -476,12 +477,32 @@ export const challenges = {
   ] as Challenge[],
 };
 
+export const venue = {
+  eyebrow: { en: "14–15 November 2026", mn: "2026.11.14–15" },
+  title: { en: "Venue", mn: "Байршил" },
+  pageIntro: {
+    en: "The in-person event takes place at EduPark in Ulaanbaatar.",
+    mn: "Танхимын арга хэмжээ Улаанбаатар хотын EduPark-д болно.",
+  },
+  name: "EduPark",
+  addressLabel: { en: "Address", mn: "Хаяг" },
+  address: {
+    en: "Khan-Uul District, 15th khoroo, Ulaanbaatar 17011",
+    mn: "Хан-Уул дүүрэг, 15-р хороо, Улаанбаатар 17011",
+  },
+  plusCode: "WW2C+W2M",
+  datesLabel: { en: "Dates", mn: "Огноо" },
+  dates: { en: "Sat 14 – Sun 15 November 2026", mn: "2026.11.14 (Бя) – 11.15 (Ня)" },
+  openMap: { en: "Open in Google Maps", mn: "Google Maps-ээр нээх" },
+  mapTitle: { en: "Map of EduPark, Ulaanbaatar", mn: "EduPark-ийн газрын зураг" },
+};
+
 export const schedule = {
   eyebrow: { en: "14–15 November 2026", mn: "2026.11.14–15" },
   title: { en: "Schedule", mn: "Хөтөлбөр" },
   pageIntro: {
-    en: "Two days in Ulaanbaatar. Venue to be announced.",
-    mn: "Улаанбаатарт хоёр өдөр. Байршлыг удахгүй зарлана.",
+    en: "Two days at EduPark, Ulaanbaatar.",
+    mn: "EduPark-д, Улаанбаатарт хоёр өдөр.",
   },
   keyMoment: { en: "Key moment", mn: "Чухал үе" },
   days: [
@@ -867,16 +888,16 @@ export const faqs = {
       topic: "event",
       question: { en: "What should I bring?", mn: "Юу авчрах вэ?" },
       answer: {
-        en: "A laptop and charger, identification and a reusable water bottle. Details for the venue will be shared before the event.",
-        mn: "Зөөврийн компьютер, цэнэглэгч, иргэний үнэмлэх, усны сав. Байршлын дэлгэрэнгүй мэдээллийг арга хэмжээний өмнө хүргэнэ.",
+        en: "A laptop and charger, identification and a reusable water bottle.",
+        mn: "Зөөврийн компьютер, цэнэглэгч, иргэний үнэмлэх, усны сав.",
       },
     },
     {
       topic: "event",
       question: { en: "Where is the venue?", mn: "Хаана болох вэ?" },
       answer: {
-        en: "The Ulaanbaatar venue will be announced here and on Questa's Instagram.",
-        mn: "Улаанбаатар дахь байршлыг энэ сайт болон Questa-гийн Instagram хуудсаар зарлана.",
+        en: "EduPark in Khan-Uul District, 15th khoroo, Ulaanbaatar. See the Venue page for the map and directions.",
+        mn: "Улаанбаатар, Хан-Уул дүүрэг, 15-р хороо, EduPark. Газрын зураг болон хаягийг «Байршил» хуудсаас үзээрэй.",
       },
     },
     {

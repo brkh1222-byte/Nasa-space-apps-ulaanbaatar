@@ -25,6 +25,11 @@ export const officialUrls = {
   home: "https://www.spaceappschallenge.org/",
 };
 
+export const venueMap = {
+  link: "https://maps.app.goo.gl/Fcoa5BrnCSMX8UnM9",
+  embed: "https://maps.google.com/maps?q=EduPark,+WW2C%2BW2M,+Ulaanbaatar+17011&z=16&output=embed",
+};
+
 export const spaceAppsSocials = [
   { label: "Instagram", href: "https://www.instagram.com/nasa_spaceapps" },
   { label: "Facebook", href: "https://www.facebook.com/spaceappschallenge" },

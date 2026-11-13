@@ -5,7 +5,7 @@ import { writeFileSync } from "node:fs";
 const siteUrl = (
   process.env.VITE_SITE_URL || "https://nasa-space-apps-ulaanbaatar.vercel.app"
 ).replace(/\/$/, "");
-const paths = ["/", "/about", "/challenges", "/schedule", "/judging", "/faq", "/organizers"];
+const paths = ["/", "/about", "/challenges", "/schedule", "/venue", "/judging", "/faq", "/organizers"];
 const today = new Date().toISOString().slice(0, 10);
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

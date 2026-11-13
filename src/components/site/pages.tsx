@@ -1,5 +1,15 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, Facebook, Instagram, Mail, Monitor, Users } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  CalendarDays,
+  Facebook,
+  Instagram,
+  Mail,
+  MapPin,
+  Monitor,
+  Users,
+} from "lucide-react";
 
 import {
   Accordion,
@@ -8,7 +18,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { contact, officialUrls } from "@/content/site-config";
+import { contact, officialUrls, venueMap } from "@/content/site-config";
 import {
   about,
   challenges,
@@ -19,6 +29,7 @@ import {
   participantGuide,
   schedule,
   ui,
+  venue,
   type FaqTopic,
 } from "@/content/site-content";
 import { useLanguage } from "@/lib/language";
@@ -174,6 +185,65 @@ export function SchedulePage() {
               </article>
             </Reveal>
           ))}
+        </Container>
+      </section>
+      <RegisterBand />
+    </>
+  );
+}
+
+export function VenuePage() {
+  const { t } = useLanguage();
+  return (
+    <>
+      <PageHero eyebrow={venue.eyebrow} title={venue.title} intro={venue.pageIntro} />
+      <section className="py-20 md:py-28">
+        <Container className="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:items-start">
+          <Reveal>
+            <div className="grid gap-8">
+              <h2 className="text-3xl font-bold text-deep md:text-4xl">{venue.name}</h2>
+              <dl className="grid gap-6">
+                <div className="flex gap-4">
+                  <MapPin className="mt-1 size-5 shrink-0 text-electric" aria-hidden="true" />
+                  <div>
+                    <dt className="text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground">
+                      {t(venue.addressLabel)}
+                    </dt>
+                    <dd className="mt-1 text-lg leading-7 text-deep">
+                      {venue.name}, {t(venue.address)}
+                      <span className="block text-sm text-muted-foreground">{venue.plusCode}</span>
+                    </dd>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <CalendarDays className="mt-1 size-5 shrink-0 text-electric" aria-hidden="true" />
+                  <div>
+                    <dt className="text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground">
+                      {t(venue.datesLabel)}
+                    </dt>
+                    <dd className="mt-1 text-lg leading-7 text-deep">{t(venue.dates)}</dd>
+                  </div>
+                </div>
+              </dl>
+              <Button asChild size="lg" className="w-fit">
+                <ExternalLink href={venueMap.link}>
+                  {t(venue.openMap)} <ArrowUpRight className="size-4" aria-hidden="true" />
+                </ExternalLink>
+              </Button>
+            </div>
+          </Reveal>
+          <Reveal>
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-line bg-mist">
+              <iframe
+                src={venueMap.embed}
+                title={t(venue.mapTitle)}
+                className="size-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+          </Reveal>
         </Container>
       </section>
       <RegisterBand />
