@@ -96,8 +96,8 @@ export const about = {
     {
       title: { en: "In person", mn: "Танхимаар" },
       text: {
-        en: "Build alongside the local community in Ulaanbaatar, with mentors, workshops and the full event atmosphere. Venue to be announced.",
-        mn: "Улаанбаатар дахь хамт олонтойгоо нэгдэж, менторуудын зөвлөгөө, сургалтад хамрагдан, арга хэмжээний уур амьсгал дунд хамтдаа бүтээнэ. Байршлыг удахгүй зарлана.",
+        en: "Build alongside the local community in Ulaanbaatar, with mentors, optional activities and the full event atmosphere. Venue to be announced.",
+        mn: "Улаанбаатар дахь хамт олонтойгоо нэгдэж, менторуудын зөвлөгөө авч, сонголттой үйл ажиллагаанд оролцон, арга хэмжээний уур амьсгал дунд хамтдаа бүтээнэ. Байршлыг удахгүй зарлана.",
       },
     },
     {
@@ -141,8 +141,8 @@ export const howItWorks = {
     {
       title: { en: "Present", mn: "Танилцуулах" },
       text: {
-        en: "Submit your project and pitch it to local judges. Local nominees go on to NASA Global Judging.",
-        mn: "Бүтээлээ илгээж, орон нутгийн шүүгчдэд танилцуулна. Шилдэг багууд NASA-гийн дэлхийн шатны шалгаруулалтад нэр дэвшинэ.",
+        en: "Hand in your project for local judging on Sunday evening. Local nominees go on to NASA Global Judging.",
+        mn: "Ням гарагийн орой бүтээлээ орон нутгийн шүүлтэд өгнө. Шилдэг багууд NASA-гийн дэлхийн шатны шалгаруулалтад нэр дэвшинэ.",
       },
     },
   ],
@@ -499,7 +499,7 @@ export const schedule = {
         },
         {
           time: "10:30",
-          title: { en: "Mentor and team briefing", mn: "Ментор болон багуудын мэдээлэл" },
+          title: { en: "Mentor and team introductions", mn: "Ментор болон багуудын танилцуулга" },
         },
         {
           time: "11:00",
@@ -509,8 +509,8 @@ export const schedule = {
         {
           time: "12:30",
           title: {
-            en: "Lunch, optional activities and speakers",
-            mn: "Өдрийн хоол, сонголттой үйл ажиллагаа, илтгэгч",
+            en: "Lunch, optional activities and mentor meetings",
+            mn: "Өдрийн хоол, сонголттой үйл ажиллагаа, менторын уулзалт",
           },
         },
         { time: "13:30", title: { en: "Hacking continues", mn: "Төсөл боловсруулалт үргэлжилнэ" } },
@@ -538,55 +538,57 @@ export const schedule = {
         {
           time: "09:00–09:30",
           title: {
-            en: "Day logistics and announcements",
-            mn: "Өдрийн зохион байгуулалт, мэдээлэл",
+            en: "Day logistics, announcements and reminders",
+            mn: "Өдрийн зохион байгуулалт, зарлал, сануулга",
           },
         },
         {
           time: "09:30–10:00",
-          title: { en: "Check-in and progress update", mn: "Ирц бүртгэл, явцын мэдээлэл" },
+          title: {
+            en: "Participant check-in and project progress update",
+            mn: "Оролцогчдын ирц бүртгэл, төслийн явцын мэдээлэл",
+          },
         },
         { time: "10:00–13:00", title: { en: "Hacking", mn: "Төсөл боловсруулалт" } },
         { time: "13:00–14:00", title: { en: "Lunch", mn: "Өдрийн хоол" } },
         {
-          time: "14:00–19:00",
+          time: "14:00–18:00",
           title: {
             en: "Final build and submission preparation",
-            mn: "Эцсийн боловсруулалт, илгээх бэлтгэл",
+            mn: "Төслөө эцэслэх, илгээх бэлтгэл",
           },
         },
         {
-          time: "19:00",
+          time: "18:00–18:30",
           title: {
-            en: "Local submission deadline",
-            mn: "Орон нутгийн шүүлтэд илгээх эцсийн хугацаа",
+            en: "Final window to hand in project materials for local judging",
+            mn: "Орон нутгийн шүүлтэд оруулах төслийн материал хүлээн авах эцсийн цаг",
           },
           key: true,
         },
         {
-          time: "19:00–21:00",
-          title: { en: "Local judging", mn: "Орон нутгийн шүүлт" },
-          note: {
-            en: "While the judges deliberate: dinner for participants and free time for networking.",
-            mn: "Шүүгчид үнэлж байх хооронд оролцогчдод оройн хоол, чөлөөт цаг, танилцах боломж.",
-          },
+          time: "18:30–19:30",
+          title: { en: "Local judging", mn: "Шүүгчдийн үнэлгээ" },
         },
         {
-          time: "21:15",
-          title: { en: "Awards ceremony", mn: "Шагнал гардуулах ёслол" },
+          time: "19:30–21:00",
+          title: { en: "Local awards and closing ceremony", mn: "Шагнал гардуулах, хаалтын ёслол" },
           key: true,
+        },
+        {
+          time: "21:00–23:59",
+          title: {
+            en: "Technical support for every team to finalise and submit on the NASA platform",
+            mn: "Бүх багт NASA-гийн платформд төслөө эцэслэн илгээхэд техникийн туслалцаа",
+          },
         },
         {
           time: "23:59",
           title: {
-            en: "Official NASA project submission closes",
-            mn: "NASA-гийн албан ёсны төсөл илгээх хугацаа дуусна",
+            en: "Official NASA project submission deadline",
+            mn: "NASA-д төслөө албан ёсоор илгээх эцсийн хугацаа",
           },
           key: true,
-          note: {
-            en: "Teams can keep polishing their project and get submission support until the global deadline.",
-            mn: "Багууд дэлхийн шатны эцсийн хугацаа хүртэл төслөө сайжруулж, илгээхэд нь туслалцаа авах боломжтой.",
-          },
         },
       ],
     },
@@ -688,16 +690,16 @@ export const judging = {
   pathTitle: { en: "From Ulaanbaatar to Global Judging", mn: "Улаанбаатараас дэлхийн шат хүртэл" },
   path: [
     {
-      en: "Teams submit their projects for local judging by Sunday 19:00",
-      mn: "Багууд Ням гарагийн 19:00 цаг хүртэл орон нутгийн шүүлтэд төслөө илгээнэ",
+      en: "Teams hand in their project materials for local judging by Sunday 18:30",
+      mn: "Багууд Ням гарагийн 18:30 цаг хүртэл орон нутгийн шүүлтэд төслийн материалаа өгнө",
     },
     {
-      en: "Local judges review the projects from 19:00 to 21:00",
-      mn: "Орон нутгийн шүүгчид 19:00–21:00 цагийн хооронд төслүүдийг үнэлнэ",
+      en: "Local judges review the projects from 18:30 to 19:30",
+      mn: "Орон нутгийн шүүгчид 18:30–19:30 цагийн хооронд төслүүдийг үнэлнэ",
     },
     {
-      en: "Winners and Global Nominees are announced at the awards ceremony at 21:15",
-      mn: "21:15 цагаас эхлэх шагнал гардуулах ёслолоор шалгарсан багууд болон нэр дэвшигчдийг зарлана",
+      en: "Winners and Global Nominees are announced at the awards and closing ceremony at 19:30",
+      mn: "19:30 цагаас эхлэх шагнал гардуулах, хаалтын ёслолоор шалгарсан багууд болон нэр дэвшигчдийг зарлана",
     },
     {
       en: "Every team completes its official NASA submission by 23:59, and nominees enter NASA Global Judging",
@@ -741,8 +743,8 @@ export const judging = {
   },
   judgesTitle: { en: "Judges", mn: "Шүүгчид" },
   judgesIntro: {
-    en: "Four judges from education and academia review the Ulaanbaatar projects.",
-    mn: "Боловсрол, эрдэм шинжилгээний салбарын дөрвөн шүүгч Улаанбаатарын төслүүдийг үнэлнэ.",
+    en: "Two judges from education and academia review the Ulaanbaatar projects.",
+    mn: "Боловсрол, эрдэм шинжилгээний салбарын хоёр шүүгч Улаанбаатарын төслүүдийг үнэлнэ.",
   },
   // Logos live in public/brand/partners/. Leave `logo` empty to show the organization name instead.
   // TODO(content): add the university name and logo files.
@@ -750,16 +752,6 @@ export const judging = {
     {
       role: { en: "Teacher", mn: "Багш" },
       organization: { en: "Seed Academy", mn: "Seed Academy" },
-      logo: "",
-    },
-    {
-      role: { en: "Teacher", mn: "Багш" },
-      organization: { en: "Pinecone Academy", mn: "Pinecone Academy" },
-      logo: "",
-    },
-    {
-      role: { en: "Teacher", mn: "Багш" },
-      organization: { en: "Pinecone Academy", mn: "Pinecone Academy" },
       logo: "",
     },
     {
@@ -899,8 +891,8 @@ export const faqs = {
       topic: "judging",
       question: { en: "When are the submission deadlines?", mn: "Төслөө хэзээ хүртэл илгээх вэ?" },
       answer: {
-        en: "Submit for local judging by 19:00 on Sunday 15 November. The official NASA project submission stays open until 23:59 local time that night.",
-        mn: "Орон нутгийн шүүлтэд 11-р сарын 15-ны Ням гарагийн 19:00 цаг хүртэл илгээнэ. NASA-гийн албан ёсны төсөл илгээх систем тэр орой орон нутгийн цагаар 23:59 хүртэл нээлттэй.",
+        en: "Hand in your project materials for local judging by 18:30 on Sunday 15 November. The official NASA project submission stays open until 23:59 local time that night.",
+        mn: "Орон нутгийн шүүлтэд 11-р сарын 15-ны Ням гарагийн 18:30 цаг хүртэл төслийн материалаа өгнө. NASA-гийн албан ёсны төсөл илгээх систем тэр орой орон нутгийн цагаар 23:59 хүртэл нээлттэй.",
       },
     },
     {
