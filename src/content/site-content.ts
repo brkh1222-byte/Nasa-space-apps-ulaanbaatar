@@ -803,6 +803,7 @@ export const judging = {
       role: { en: "Software Engineer", mn: "Програм хангамжийн инженер" },
       organization: { en: "Black Conx", mn: "Black Conx" },
       photo: "/judges/berkh-jadamba.jpg",
+      url: "https://berkhjadamba.space",
     },
     {
       name: "Batzorig",
@@ -810,7 +811,13 @@ export const judging = {
       organization: { en: "AND Global", mn: "AND Global" },
       photo: "/judges/batzorig.jpg",
     },
-  ] as Array<{ name: string; role: Localized; organization: Localized; photo: string }>,
+  ] as Array<{
+    name: string;
+    role: Localized;
+    organization: Localized;
+    photo: string;
+    url?: string;
+  }>,
 } as const;
 
 export type FaqTopic = "registration" | "teams" | "participation" | "event" | "judging";

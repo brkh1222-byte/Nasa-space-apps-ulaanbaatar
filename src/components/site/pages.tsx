@@ -355,7 +355,18 @@ export function JudgingPage() {
                     loading="lazy"
                   />
                   <div className="p-6">
-                    <p className="text-xl font-bold text-deep">{judge.name}</p>
+                    <p className="text-xl font-bold text-deep">
+                      {judge.url ? (
+                        <ExternalLink
+                          href={judge.url}
+                          className="underline decoration-electric/40 underline-offset-4 hover:text-electric hover:decoration-electric"
+                        >
+                          {judge.name}
+                        </ExternalLink>
+                      ) : (
+                        judge.name
+                      )}
+                    </p>
                     <p className="mt-1 font-semibold text-deep">{t(judge.role)}</p>
                     <p className="text-muted-foreground">{t(judge.organization)}</p>
                   </div>
