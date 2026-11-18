@@ -641,8 +641,8 @@ export const judging = {
     mn: "Төслүүдийг хэрхэн үнэлж, хэн дэлхийн шатанд нэр дэвших тухай.",
   },
   intro: {
-    en: "A panel of local judges assesses each eligible project using the official NASA Space Apps criteria. Four teams are recognised in Ulaanbaatar.",
-    mn: "Орон нутгийн шүүгчдийн бүрэлдэхүүн шаардлага хангасан төсөл бүрийг NASA Space Apps-ийн албан ёсны шалгуураар үнэлнэ. Улаанбаатарт нийт дөрвөн багийг шалгаруулна.",
+    en: "A panel of local judges assesses each eligible project using the official NASA Space Apps criteria. Six teams are recognised in Ulaanbaatar.",
+    mn: "Орон нутгийн шүүгчдийн бүрэлдэхүүн шаардлага хангасан төсөл бүрийг NASA Space Apps-ийн албан ёсны шалгуураар үнэлнэ. Улаанбаатарт нийт зургаан багийг шалгаруулна.",
   },
   awardsTitle: { en: "Local awards", mn: "Орон нутгийн шагнал" },
   awards: [
@@ -668,6 +668,22 @@ export const judging = {
       text: {
         en: "Global Nominee from Mongolia and a certificate.",
         mn: "Монголоос дэлхийн шатанд нэр дэвшинэ. Сертификат олгоно.",
+      },
+    },
+    {
+      mark: "IV",
+      title: { en: "4th place", mn: "IV байр" },
+      text: {
+        en: "A local award and a certificate.",
+        mn: "Орон нутгийн шагнал болон сертификат.",
+      },
+    },
+    {
+      mark: "V",
+      title: { en: "5th place", mn: "V байр" },
+      text: {
+        en: "A local award and a certificate.",
+        mn: "Орон нутгийн шагнал болон сертификат.",
       },
     },
     {
@@ -777,28 +793,24 @@ export const judging = {
   },
   judgesTitle: { en: "Judges", mn: "Шүүгчид" },
   judgesIntro: {
-    en: "Two judges from education and academia review the Ulaanbaatar projects.",
-    mn: "Боловсрол, эрдэм шинжилгээний салбарын хоёр шүүгч Улаанбаатарын төслүүдийг үнэлнэ.",
+    en: "Engineers from Mongolia's tech community review the Ulaanbaatar projects.",
+    mn: "Монголын технологийн салбарын инженерүүд Улаанбаатарын төслүүдийг үнэлнэ.",
   },
-  // Logos live in public/brand/partners/. Leave `logo` empty to show the organization name instead.
-  // TODO(content): add the university name and logo files.
+  // Judge photos live in public/judges/.
   judges: [
     {
-      role: { en: "Teacher", mn: "Багш" },
-      organization: { en: "Seed Academy", mn: "Seed Academy" },
-      logo: "",
+      name: "Berkh Jadamba",
+      role: { en: "Software Engineer", mn: "Програм хангамжийн инженер" },
+      organization: { en: "Black Conx", mn: "Black Conx" },
+      photo: "/judges/berkh-jadamba.jpg",
     },
     {
-      role: { en: "Professor", mn: "Профессор" },
-      organization: { en: "University", mn: "Их сургууль" },
-      logo: "",
+      name: "Batzorig",
+      role: { en: "Machine Learning Engineer", mn: "Машин сургалтын инженер" },
+      organization: { en: "AND Global", mn: "AND Global" },
+      photo: "/judges/batzorig.jpg",
     },
-  ] as Array<{ name?: string; role: Localized; organization: Localized; logo: string }>,
-  mentorsTitle: { en: "Mentors", mn: "Менторууд" },
-  mentorsText: {
-    en: "We are inviting mentors across science, technology, design, data, business and storytelling. Confirmed names will appear here.",
-    mn: "Шинжлэх ухаан, технологи, дизайн, өгөгдөл, бизнес, контент бүтээлийн салбарын менторуудыг урьж байна. Баталгаажсан нэрсийг энд нийтэлнэ.",
-  },
+  ] as Array<{ name: string; role: Localized; organization: Localized; photo: string }>,
 } as const;
 
 export type FaqTopic = "registration" | "teams" | "participation" | "event" | "judging";
@@ -917,8 +929,8 @@ export const faqs = {
       topic: "judging",
       question: { en: "How are projects judged?", mn: "Төслүүдийг хэрхэн үнэлэх вэ?" },
       answer: {
-        en: "Local judges score projects on impact, creativity, validity, relevance and presentation. The top three teams become Global Nominees from Mongolia, and Seed Academy awards one more team a special prize. See the Judging page for details.",
-        mn: "Орон нутгийн шүүгчид төслүүдийг үр нөлөө, бүтээлч байдал, үндэслэл, нийцэл, танилцуулга гэсэн шалгуураар үнэлнэ. Шилдэг гурван баг Монголоос дэлхийн шатанд нэр дэвшиж, Seed Academy өөр нэг багт тусгай шагнал олгоно. Дэлгэрэнгүйг «Шалгаруулалт» хуудаснаас үзнэ үү.",
+        en: "Local judges score projects on impact, creativity, validity, relevance and presentation. The top five teams receive local awards, the top three become Global Nominees from Mongolia, and Seed Academy awards one more team a special prize. See the Judging page for details.",
+        mn: "Орон нутгийн шүүгчид төслүүдийг үр нөлөө, бүтээлч байдал, үндэслэл, нийцэл, танилцуулга гэсэн шалгуураар үнэлнэ. Шилдэг таван баг орон нутгийн шагнал хүртэж, эхний гурван баг Монголоос дэлхийн шатанд нэр дэвшинэ. Мөн Seed Academy өөр нэг багт тусгай шагнал олгоно. Дэлгэрэнгүйг «Шалгаруулалт» хуудаснаас үзнэ үү.",
       },
     },
     {
@@ -933,8 +945,8 @@ export const faqs = {
       topic: "judging",
       question: { en: "Are there cash prizes?", mn: "Мөнгөн шагнал бий юу?" },
       answer: {
-        en: "No. The top three teams become Global Nominees from Mongolia and receive certificates, and Seed Academy awards a special prize to one more team.",
-        mn: "Үгүй. Шилдэг гурван баг Монголоос дэлхийн шатанд нэр дэвшиж, сертификат авна. Мөн Seed Academy өөр нэг багт тусгай шагнал олгоно.",
+        en: "No. The top five teams receive local awards and certificates, the top three become Global Nominees from Mongolia, and Seed Academy awards a special prize to one more team.",
+        mn: "Үгүй. Шилдэг таван баг орон нутгийн шагнал, сертификат авч, эхний гурван баг Монголоос дэлхийн шатанд нэр дэвшинэ. Мөн Seed Academy өөр нэг багт тусгай шагнал олгоно.",
       },
     },
   ] as Array<{ topic: FaqTopic; featured?: boolean; question: Localized; answer: Localized }>,
@@ -957,11 +969,49 @@ export const organizers = {
     mn: "Questa нь жил бүр зохион байгуулагддаг дэлхийн хамгийн том хакатоныг Монголын оюутан залуус, бүтээгчид болон STEM хамт олонд хүргэж, NASA Space Apps Challenge Улаанбаатарыг зохион байгуулж байна.",
   },
   followQuesta: { en: "Follow Questa on Instagram", mn: "Questa-г Instagram-аас дагах" },
-  teamTitle: { en: "Local team and partners", mn: "Орон нутгийн баг ба түншүүд" },
+  teamTitle: { en: "Organizing team", mn: "Зохион байгуулах баг" },
   teamText: {
-    en: "The local organizing team, partners and sponsors will be announced as they are confirmed.",
-    mn: "Орон нутгийн зохион байгуулах баг, түнш, ивээн тэтгэгчдийг баталгаажсаны дараа зарлана.",
+    en: "The volunteers who brought NASA Space Apps Challenge to Ulaanbaatar.",
+    mn: "NASA Space Apps Challenge-ийг Улаанбаатарт авчирсан сайн дурынхан.",
   },
+  // Team photos live in public/team/.
+  teamPhotos: [
+    {
+      src: "/team/team-1.jpg",
+      alt: { en: "Organizing team at the event", mn: "Зохион байгуулах баг арга хэмжээн дээр" },
+    },
+    {
+      src: "/team/team-2.jpg",
+      alt: {
+        en: "Organizing team in the hacking room",
+        mn: "Зохион байгуулах баг хакатоны танхимд",
+      },
+    },
+    {
+      src: "/team/team-3.jpg",
+      alt: {
+        en: "Organizers in front of the event banner",
+        mn: "Зохион байгуулагчид баннерын өмнө",
+      },
+    },
+    {
+      src: "/team/team-4.jpg",
+      alt: { en: "Organizers at the help desk", mn: "Зохион байгуулагчид мэдээллийн ширээнд" },
+    },
+  ] as Array<{ src: string; alt: Localized }>,
+  sponsorsTitle: { en: "Sponsors", mn: "Ивээн тэтгэгчид" },
+  sponsorsText: {
+    en: "Thank you to the partners who made NASA Space Apps Challenge Ulaanbaatar 2026 possible.",
+    mn: "NASA Space Apps Challenge Улаанбаатар 2026-г бүтээхэд хувь нэмэр оруулсан түншүүддээ баярлалаа.",
+  },
+  // Logos live in public/brand/partners/. Leave `logo` empty to show the name instead.
+  // `fill: true` stretches a logo that has its own background across the whole tile.
+  sponsors: [
+    { name: "Seed Academy", logo: "/brand/partners/seed-academy.png", fill: true },
+    { name: "Tenger TV", logo: "/brand/partners/tenger-tv.png", fill: true },
+    { name: "Tino Super App", logo: "/brand/partners/tino.png", fill: false },
+  ] as Array<{ name: string; logo: string; fill: boolean }>,
+  partnersTitle: { en: "Partner with us", mn: "Бидэнтэй хамтрах" },
   partnerCta: {
     en: "Interested in partnering or mentoring? Contact the team.",
     mn: "Түнш эсвэл ментор болох сонирхолтой юу? Бидэнтэй холбогдоорой.",

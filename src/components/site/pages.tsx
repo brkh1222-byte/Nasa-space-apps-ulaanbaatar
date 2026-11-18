@@ -271,7 +271,7 @@ export function JudgingPage() {
             <Reveal>
               <h2 className="text-2xl font-bold text-deep md:text-3xl">{t(judging.awardsTitle)}</h2>
             </Reveal>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {judging.awards.map((award) => (
                 <Reveal key={award.title.en} className="h-full">
                   <article className="h-full rounded-2xl border border-line p-6">
@@ -342,29 +342,23 @@ export function JudgingPage() {
               {t(judging.judgesIntro)}
             </p>
           </Reveal>
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {judging.judges.map((judge, index) => (
-              <Reveal key={index} className="h-full">
-                <li className="flex h-full flex-col rounded-2xl border border-line bg-white p-6">
-                  <div className="grid h-24 place-items-center rounded-xl bg-mist px-6">
-                    {judge.logo ? (
-                      <img
-                        src={judge.logo}
-                        alt={t(judge.organization)}
-                        className="max-h-14 w-auto max-w-full object-contain"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <span className="text-center font-display text-lg font-bold text-deep">
-                        {t(judge.organization)}
-                      </span>
-                    )}
+          <ul className="grid gap-6 sm:grid-cols-2 lg:max-w-4xl">
+            {judging.judges.map((judge) => (
+              <Reveal key={judge.name} className="h-full">
+                <li className="flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white">
+                  <img
+                    src={judge.photo}
+                    alt={judge.name}
+                    width={828}
+                    height={1030}
+                    className="aspect-[828/1030] w-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="p-6">
+                    <p className="text-xl font-bold text-deep">{judge.name}</p>
+                    <p className="mt-1 font-semibold text-deep">{t(judge.role)}</p>
+                    <p className="text-muted-foreground">{t(judge.organization)}</p>
                   </div>
-                  {judge.name && <p className="mt-5 text-lg font-bold text-deep">{judge.name}</p>}
-                  <p className={cn("font-semibold text-deep", judge.name ? "mt-1" : "mt-5")}>
-                    {t(judge.role)}
-                  </p>
-                  <p className="text-muted-foreground">{t(judge.organization)}</p>
                 </li>
               </Reveal>
             ))}
@@ -372,8 +366,8 @@ export function JudgingPage() {
         </Container>
       </section>
       <section className="bg-mist py-20 md:py-28">
-        <Container className="grid gap-10 lg:grid-cols-2 lg:gap-20">
-          <Reveal>
+        <Container>
+          <Reveal className="max-w-3xl">
             <h2 className="text-2xl font-bold text-deep md:text-3xl">{t(judging.pathTitle)}</h2>
             <ol className="mt-8 grid gap-4">
               {judging.path.map((step, index) => (
@@ -385,15 +379,6 @@ export function JudgingPage() {
                 </li>
               ))}
             </ol>
-          </Reveal>
-          <Reveal>
-            <h2 className="text-2xl font-bold text-deep md:text-3xl">{t(judging.mentorsTitle)}</h2>
-            <div className="mt-8 rounded-2xl border border-dashed border-line bg-white p-7">
-              <span className="text-xs font-bold uppercase tracking-[0.14em] text-electric">
-                {t(ui.comingSoon)}
-              </span>
-              <p className="mt-3 leading-7 text-muted-foreground">{t(judging.mentorsText)}</p>
-            </div>
           </Reveal>
         </Container>
       </section>
@@ -536,12 +521,72 @@ export function OrganizersPage() {
         </Container>
       </section>
       <section className="bg-mist py-20 md:py-28">
-        <Container className="grid gap-6 lg:grid-cols-2 lg:gap-20">
+        <Container className="grid gap-10">
           <Reveal>
             <h2 className="text-2xl font-bold text-deep md:text-3xl">{t(organizers.teamTitle)}</h2>
-            <p className="mt-4 leading-7 text-muted-foreground">{t(organizers.teamText)}</p>
+            <p className="mt-4 max-w-2xl leading-7 text-muted-foreground">
+              {t(organizers.teamText)}
+            </p>
           </Reveal>
-          <Reveal className="grid content-start gap-4 rounded-2xl bg-white p-7">
+          <ul className="grid gap-4 sm:grid-cols-2">
+            {organizers.teamPhotos.map((photo) => (
+              <Reveal key={photo.src} className="h-full">
+                <li className="h-full overflow-hidden rounded-2xl bg-white">
+                  <img
+                    src={photo.src}
+                    alt={t(photo.alt)}
+                    className="aspect-[3/2] h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+        </Container>
+      </section>
+      <section className="bg-deep py-20 text-white md:py-28">
+        <Container className="grid gap-10">
+          <Reveal>
+            <h2 className="text-2xl font-bold md:text-3xl">{t(organizers.sponsorsTitle)}</h2>
+            <p className="mt-4 max-w-2xl leading-7 text-on-deep">{t(organizers.sponsorsText)}</p>
+          </Reveal>
+          <ul className="grid gap-4 sm:grid-cols-3">
+            {organizers.sponsors.map((sponsor) => (
+              <Reveal key={sponsor.name} className="h-full">
+                <li
+                  className={cn(
+                    "grid aspect-[12/5] place-items-center overflow-hidden rounded-2xl bg-white",
+                    !sponsor.fill && "px-4 py-2",
+                  )}
+                >
+                  {sponsor.logo ? (
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className={
+                        sponsor.fill ? "h-full w-full object-cover" : "h-full w-full object-contain"
+                      }
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="text-center font-display text-2xl font-bold text-deep">
+                      {sponsor.name}
+                    </span>
+                  )}
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+        </Container>
+      </section>
+      <section className="py-20 md:py-28">
+        <Container className="grid gap-6 lg:grid-cols-2 lg:gap-20">
+          <Reveal>
+            <h2 className="text-2xl font-bold text-deep md:text-3xl">
+              {t(organizers.partnersTitle)}
+            </h2>
+          </Reveal>
+          <Reveal className="grid content-start gap-4 rounded-2xl bg-mist p-7">
             <p className="font-semibold text-deep">{t(organizers.partnerCta)}</p>
             {contact.email ? (
               <a
